@@ -1,4 +1,4 @@
-<div class="container" style="margin-top: 200px; margin-bottom: 200px">
+<div class="container" style="margin-top: 20px;">
     <p class="fw-bold text-center fs-2 mb-3">
         Our Core Services
     </p>

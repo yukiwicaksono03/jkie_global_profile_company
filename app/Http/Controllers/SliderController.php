@@ -24,7 +24,7 @@ class SliderController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'path' => 'required|image|mimes:jpg,jpeg,webp|max:2048',
+            'path' => 'nullable|file|mimetypes:video/mp4,video/webm,video/ogg|max:100000', // 100MB
             'desc' => 'nullable|string'
         ]);
 
@@ -49,7 +49,7 @@ class SliderController extends Controller
     public function update(Request $request, Slider $slider)
     {
         $request->validate([
-            'path' => 'nullable|image|mimes:jpg,jpeg,webp|max:2048',
+            'path' => 'nullable|file|mimetypes:video/mp4,video/webm,video/ogg|max:100000', // 100MB
             'desc' => 'nullable|string'
         ]);
 

@@ -28,18 +28,20 @@ class HomeController extends Controller
         $master = Master::latest()->first();
         $facilities = Facility::latest()->get();
         $wisata = Entertainment::latest()->get();
-        return view('about', ["master" => $master, "facilities" => $facilities, "wisata" => $wisata]);
+        $slider = Slider::latest()->get();
+        return view('about', ["master" => $master, "facilities" => $facilities, "wisata" => $wisata, "slider" => $slider]);
     }
     public function menu(Request $request){
         $master = Master::latest()->first();
         $category = Categories::latest()->get();
         $menuQuery = Menu::with('category')->latest();
+        $slider = Slider::latest()->get();
 
         if ($request->has('category') && $request->category != '') {
             $menuQuery->where('category_id', $request->category);
         }
         $menu = $menuQuery->get();
-        return view('menu', ["master" => $master, "categories" => $category, "menu" => $menu]);
+        return view('menu', ["master" => $master, "categories" => $category, "menu" => $menu, "slider" => $slider]);
     }
 
     public function menu_detail($id)

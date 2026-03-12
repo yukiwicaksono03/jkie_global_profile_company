@@ -52,6 +52,18 @@
             color: white !important;
         }
 
+        .btn-yellow{
+            background: transparent;
+            color: #fff;
+            border: 1px solid #fff !important;
+        }
+
+        .btn-yellow:hover{
+            background:#f5c518;
+            color:#fff;
+            border: 1px solid #f5c518 !important;
+        }
+
         body {
             display: flex;
             flex-direction: column;
