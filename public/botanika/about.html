@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  
+  <!-- Font Awesome (for footer icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+ 
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <title>About US</title>
+
+</head>
+<body>
+    
+     <!-- FIX 1: TAMBAHKAN fixed-top untuk navbar konsisten -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top"> 
+        <div class="container-fluid px-5">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo.png" alt="Botanika Logo" height="24" class="d-inline-block align-text-top">
+            </a> 
+        
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> 
+            <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="menu.html">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="event.html">Event</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="store.html">Store</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                        <i class="bi bi-person-circle"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+<!-- FIX 2: HILANGKAN class start-section dan gunakan padding bawaan Bootstrap -->
+<section id="about" class="history py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6 mb-4 mb-md-0">
+                <img src="img/kuliner-Kopi-Botanika-a.jpg" class="img-fluid rounded shadow" alt="History Botanika">
+            </div>
+
+            <div class="col-md-6"> 
+                <h2 class="fw-bold text-success mb-3">Sejarah Kami</h2>
+                <p class="text-secondary">
+                    Botanika Coffee berdiri pada tahun 2020 dengan tujuan menghadirkan ruang untuk melepas penat, berbagi cerita, serta menikmati kopi dengan cita rasa terbaik.
+                </p>
+                <!-- ... (Konten lainnya) ... -->
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam repellendus necessitatibus totam dolor cum debitis nulla! Numquam reprehenderit at deleniti est sequi beatae voluptate, adipisci officia. Ab perspiciatis eligendi nemo?</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea laborum itaque vel veniam, ullam consequuntur, porro expedita distinctio tenetur quae saepe omnis atque soluta cupiditate. Aliquid harum ullam earum odio.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- ===== VISI MISI SECTION ===== -->
+<section class="vision-mission py-5 bg-light">
+  <div class="container text-center">
+    <h2 class="fw-bold text-success">Visi & Misi</h2>
+    <div class="row mt-4">
+
+      <div class="col-md-6">
+        <div class="card shadow p-4 rounded-4">
+          <h4 class="fw-bold">Visi</h4>
+          <p class="text-secondary">
+            Menjadi tempat terbaik bagi pecinta kopi dan ruang bertemu yang menginspirasi kreativitas, kebersamaan, dan kebaikan.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card shadow p-4 rounded-4">
+          <h4 class="fw-bold">Misi</h4>
+          <ul class="text-secondary text-start mx-auto" style="max-width: 350px;">
+            <li>Menyajikan kopi berkualitas tinggi dari petani lokal.</li>
+            <li>Menciptakan lingkungan ramah dan nyaman untuk semua.</li>
+            <li>Mengadakan event komunitas untuk karya dan kolaborasi.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== GALERI / WAHANA SECTION ===== -->
+ <section id="fasilitas" class="py-5" style="background-color: #FAF8F5;">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-3">Fasilitas Kami</h2>
+    <p class="mb-5">
+      Kami menyediakan fasilitas terbaik untuk kenyamanan Anda saat menikmati kopi favorit.
+    </p>
+
+    <div class="row g-4">
+
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="facility-card p-4 rounded shadow-sm">
+          <div class="icon mb-3"><i class="fa-solid fa-wifi"></i></div>
+          <h5 class="fw-bold">Free Wi-Fi</h5>
+          <p>Akses internet gratis untuk bekerja, belajar, atau sekadar berselancar di dunia maya.</p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="facility-card p-4 rounded shadow-sm">
+          <div class="icon mb-3"><i class="fa-solid fa-mug-hot"></i></div>
+          <h5 class="fw-bold">Barista Profesional</h5>
+          <p>Dilengkapi barista berpengalaman yang meracik kopi dari biji pilihan.</p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="facility-card p-4 rounded shadow-sm">
+          <div class="icon mb-3"><i class="fa-solid fa-chair"></i></div>
+          <h5 class="fw-bold">Ruang Nyaman</h5>
+          <p>Area indoor & outdoor dengan desain estetik dan kursi yang nyaman.</p>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col-md-4">
+        <div class="facility-card p-4 rounded shadow-sm">
+          <div class="icon mb-3"><i class="fa-solid fa-child-reaching"></i></div>
+          <h5 class="fw-bold">Kids Area</h5>
+          <p>Tempat bermain aman untuk anak agar Anda bisa menikmati waktu dengan santai.</p>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="col-md-4">
+        <div class="facility-card p-4 rounded shadow-sm">
+          <div class="icon mb-3"><i class="fa-solid fa-music"></i></div>
+          <h5 class="fw-bold">Live Music</h5>
+          <p>Acara musik akustik setiap malam minggu untuk pengalaman nongkrong lebih seru.</p>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="col-md-4">
+        <div class="facility-card p-4 rounded shadow-sm">
+          <div class="icon mb-3"><i class="fa-solid fa-square-parking"></i></div>
+          <h5 class="fw-bold">Private Parking</h5>
+          <p>Area parkir luas dan aman untuk motor dan mobil tanpa biaya tambahan.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==== WAHANA SECTION ==== -->
+<section id="wahana" class="py-5 bg-light">
+  <div class="container">
+
+    <h2 class="text-center fw-bold mb-4" style="color: #184D2B;">Wahana & Experience</h2>
+    <p class="text-center mb-5 w-75 mx-auto text-muted">
+      Nikmati berbagai wahana menarik untuk melengkapi pengalaman terbaikmu di Botanika Coffee.
+    </p>
+
+    <div class="row g-4 justify-content-center">
+
+      <!-- Item 1 -->
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="wahana-box">
+          <img src="images/wahana1.jpg" class="img-fluid" alt="Spot Foto Alam">
+          <div class="overlay">
+            <h5 class="text-white">Spot Foto Alam</h5>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="wahana-box">
+          <img src="images/wahana2.jpg" class="img-fluid" alt="Live Acoustic">
+          <div class="overlay">
+            <h5 class="text-white">Live Acoustic</h5>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="wahana-box">
+          <img src="images/wahana3.jpg" class="img-fluid" alt="Kids Playground">
+          <div class="overlay">
+            <h5 class="text-white">Kids Playground</h5>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 4 (opsional tambahan) -->
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="wahana-box">
+          <img src="images/wahana4.jpg" class="img-fluid" alt="Outdoor View">
+          <div class="overlay">
+            <h5 class="text-white">Outdoor View</h5>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ===== OUR VALUES SECTION ===== -->
+<section class="values bg-light py-5">
+  <div class="container text-center">
+    <h2 class="fw-bold text-success mb-4">Nilai yang Kami Percaya</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="p-4 shadow rounded-4">
+          <h5 class="fw-bold">Quality</h5>
+          <p class="text-secondary">Setiap biji kopi dipilih secara selektif untuk menjaga kualitas rasa.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="p-4 shadow rounded-4">
+          <h5 class="fw-bold">Community</h5>
+          <p class="text-secondary">Kami tumbuh bersama komunitas yang memberikan energi positif.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="p-4 shadow rounded-4">
+          <h5 class="fw-bold">Experience</h5>
+          <p class="text-secondary">Kami ingin setiap kunjungan menjadi pengalaman yang bermakna.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <footer class="footer bg-dark text-white py-5">
+    <div class="container">
+      <div class="row">
+
+        <!-- Kolom Kiri -->
+        <div class="col-md-6 mb-4 mb-md-0">
+          <h5 class="fw-bold">Botanika</h5>
+          <p class="mb-2">View • Coffee • Food</p>
+          <div class="d-flex gap-3 mt-3">
+            <a href="#" class="text-white fs-5"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-white fs-5"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="text-white fs-5"><i class="fab fa-youtube"></i></a>
+          </div>
+          <p class="mt-4 mb-0" style="font-size: 14px;">2025 © Botanika</p>
+        </div>
+
+        <!-- Kolom Kanan -->
+        <div class="col-md-6">
+          <h6 class="fw-semibold mb-3">Contact Center</h6>
+          <p class="mb-2">
+            <i class="fas fa-map-marker-alt me-2"></i>
+            Alamat: Jl. Boenoet Lembur Kuring, Puncak, Kec. Cigugur, Kabupaten Kuningan, Jawa Barat 45552
+          </p>
+          <p class="mb-0">
+            <i class="fab fa-whatsapp me-2"></i>
+            +62 813-2492-6596
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+    <!-- Link ke script.js harus diletakkan terakhir -->
+    <script src="script.js"></script>
+</body>
+</html>

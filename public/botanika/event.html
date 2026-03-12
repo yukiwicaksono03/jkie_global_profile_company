@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  
+  <!-- Font Awesome (for footer icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+ 
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+
+    <title>Event</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class="container-fluid px-5">
+      <!-- Bagian kiri: logo dan brand -->
+      <a class="navbar-brand" href="index.html">
+        <img src="img/logo.png" alt="Botanika Logo" height="24" class="d-inline-block align-text-top">
+      </a>
+
+      <!-- Tombol toggle untuk tampilan mobile -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Bagian kanan: menu navigasi dan form -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About US</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="menu.html">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="event.html">Event</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="store.html">Store</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="bi bi-person-circle"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="py-5 " id="event">
+    <div class="container text-center ">
+        <h2 class="fw-bold mb-4" style="color:#184D2B;">Event</h2>
+        <p class=" text-muted  mb-5 w-75 mx-auto">
+            Temukan beragam acara menarik yang siap memeriahkan hari-harimu!
+            Dari live music, pameran seni, workshop seru, 
+            hingga event spesial lainnya, semuanya bisa kamu nikmati di sini.
+    </p>
+    </div>
+
+  <div class="container text-center my-4">
+
+    <div>
+      <button class="btn btn-dark mt-1 w-20 mb-2">Lis yang Mendaftar</button>
+    </div>
+
+  <form>
+    <div class="row g-3">
+    <div class="container my-4">
+
+    <div class="row g-3">
+    <!-- Tahun -->
+    <div class="col-md-6">
+      <div class="input-group">
+        <span class="input-group-text fw-semibold">Tahun:</span>
+        <input type="number" class="form-control" value="2025">
+      </div>
+    </div>
+
+    <!-- Bulan -->
+    <div class="col-md-6">
+      <div class="input-group">
+        <span class="input-group-text fw-semibold">Bulan:</span>
+        <select class="form-select">
+          <option>Januari</option>
+          <option>Februari</option>
+          <option>Maret</option>
+          <option>April</option>
+          <option>Mei</option>
+          <option>Juni</option>
+          <option>Juli</option>
+          <option>Agustus</option>
+          <option>September</option>
+          <option>Oktober</option>
+          <option selected>November</option>
+          <option>Desember</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Tombol Full Width -->
+        <div class="col-12">
+          <button class="btn btn-success w-100 mt-1">Filter</button>
+        </div>
+
+       <table class="table table-bordered text-center mt-4">
+  <thead>
+    <tr style="background-color:#8BC34A; color:white;">
+      <th scope="col">Tanggal</th>
+      <th scope="col">Events</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Jika tidak ada data -->
+    <tr>
+      <td colspan="2" class="py-4 text-muted fst-italic">Tidak ada event di bulan ini.</td>
+    </tr>
+  </tbody>
+</table>
+      </div>    
+    </div>
+  </form>
+</div>
+</section>
+
+<section id="gallery" class="container my-5 text-center">
+
+  <h2 class="fw-bold mb-4" style="color:#2a7d49; font-size:40px;">My Gallery</h2>
+
+  <!-- Gallery -->
+  <div class="gallery-grid" id="galleryGrid">
+    <!-- Gambar akan otomatis tampil lewat JS -->
+  </div>
+
+  <!-- Pagination -->
+  <nav aria-label="Gallery Pages" class="mt-4">
+    <ul class="pagination justify-content-center">
+      <li class="page-item active"><a class="page-link" href="#" data-page="1">1</a></li>
+      <li class="page-item"><a class="page-link" href="#" data-page="2">2</a></li>
+      <li class="page-item"><a class="page-link" href="#" data-page="3">3</a></li>
+    </ul>
+  </nav>
+
+</section>
+
+
+
+<section class="py-5" style="background-color: #f3f3f3;">
+  <div class="container">
+    
+    <div class="card shadow-lg p-4 rounded-4">
+      <div class="row align-items-center">
+
+        <!-- IMAGE LEFT -->
+        <div class="col-md-5 text-center mb-4 mb-md-0">
+          <img src="img/kuliner-Kopi-Botanika-a.jpg" class="img-fluid" style="max-height: 380px;">
+        </div>
+
+        <!-- FORM RIGHT -->
+        <div class="col-md-7">
+
+          <h2 class="text-center mb-3" style="font-family: 'Oleo Script', cursive; color:#096836;">
+            Pendaftaran Event
+          </h2>
+
+          <p class="text-center">Tertarik menyelenggarakan event anda? Silahkan isi pendaftaran di bawah dan tunggu konfirmasi dari kami ya.</p>
+          <p class="text-center text-danger small">(Data pendaftaran dapat dilihat di link dekat tabel event di atas.)</p>
+
+          <form>
+
+            <input type="text" class="form-control mb-3" placeholder="Nama Penyelenggara">
+
+            <div class="input-group mb-3">
+              <input type="date" class="form-control">
+              <span class="input-group-text"><i class="fa-solid fa-calendar"></i></span>
+            </div>
+
+            <div class="input-group mb-3">
+              <select class="form-select">
+                <option selected>--.--</option>
+                <option>Pagi</option>
+                <option>Siang</option>
+                <option>Sore</option>
+                <option>Malam</option>
+              </select>
+              <span class="input-group-text"><i class="fa-regular fa-clock"></i></span>
+            </div>
+
+            <input type="text" class="form-control mb-3" placeholder="Nama Kegiatan">
+
+            <input type="tel" class="form-control mb-3" placeholder="Nomor WhatsApp">
+
+            <button class="btn btn-success w-100 py-2 fs-5">Submit</button>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer bg-dark text-white py-5">
+    <div class="container">
+      <div class="row">
+
+        <!-- Kolom Kiri -->
+        <div class="col-md-6 mb-4 mb-md-0">
+          <h5 class="fw-bold">Botanika</h5>
+          <p class="mb-2">View • Coffee • Food</p>
+          <div class="d-flex gap-3 mt-3">
+            <a href="#" class="text-white fs-5"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-white fs-5"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="text-white fs-5"><i class="fab fa-youtube"></i></a>
+          </div>
+          <p class="mt-4 mb-0" style="font-size: 14px;">2025 © Botanika</p>
+        </div>
+
+        <!-- Kolom Kanan -->
+        <div class="col-md-6">
+          <h6 class="fw-semibold mb-3">Contact Center</h6>
+          <p class="mb-2">
+            <i class="fas fa-map-marker-alt me-2"></i>
+            Alamat: Jl. Boenoet Lembur Kuring, Puncak, Kec. Cigugur, Kabupaten Kuningan, Jawa Barat 45552
+          </p>
+          <p class="mb-0">
+            <i class="fab fa-whatsapp me-2"></i>
+            +62 813-2492-6596
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+    <!-- Link ke script.js harus diletakkan terakhir -->
+    <script src="script.js"></script>
+
+</body>
+</html>
+<script>
+const images = {
+  1: ["img/kuliner-Kopi-Botanika-a.jpg", "img/gallery2.jpg", "img/gallery3.jpg", "img/kuliner-Kopi-Botanika-a.jpg"],
+  2: ["img/makanan.png", "img/gallery6.jpg", "img/gallery7.jpg", "img/kuliner-Kopi-Botanika-a.jpg"],
+  3: ["img/minuman (1).png", "img/gallery10.jpg", "img/gallery11.jpg", "img/kuliner-Kopi-Botanika-a.jpg"]
+};
+
+const galleryGrid = document.getElementById("galleryGrid");
+const pageLinks = document.querySelectorAll(".page-link");
+
+function loadGallery(page) {
+  galleryGrid.innerHTML = "";
+  images[page].forEach(img => {
+    galleryGrid.innerHTML += `
+      <div class="gallery-item">
+        <img src="${img}" alt="">
+      </div>
+    `;
+  });
+
+  // Update active button
+  pageLinks.forEach(btn => btn.parentElement.classList.remove("active"));
+  document.querySelector(`[data-page="${page}"]`).parentElement.classList.add("active");
+}
+
+// Default load page 1
+loadGallery(1);
+
+// Event listener untuk pagination
+pageLinks.forEach(link => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    loadGallery(link.dataset.page);
+  });
+});
+</script>

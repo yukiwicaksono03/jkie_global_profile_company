@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- Font Awesome (for footer icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <title>Contact BOTANIKA</title>
+</head>
+<!-- FIX: Hapus class non-home-page, biarkan body polos agar transparan di awal -->
+<body> 
+    
+     <!-- NAVBAR: fixed-top agar menempel di atas -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container-fluid px-5">
+            <a class="navbar-brand" href="index.html">
+                <!-- Logo Awal: Hijau (Pastikan ada logo_white.png di folder img/) -->
+                <img src="img/Botanika_White (1).png" alt="Botanika Logo" height="24" class="d-inline-block align-text-top">
+            </a>
+
+
+             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <!-- Bagian kanan: menu navigasi dan form -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About US</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="menu.html">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="event.html">Event</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="store.html">Store</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="bi bi-person-circle"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+<section id="contact" class="py-5">
+    <div class="container">
+        <h2 class="text-center fw-bold mb-5">Hubungi Kami</h2>
+        
+        <div class="row g-4">
+            <!-- Card Kiri (Form Kontak) -->
+            <div class="col-md-6">
+                <div class="card p-4 shadow-sm ">
+                    <div class="mb-3">
+                        <label class="form-label">Nama</label>
+                        <input type="text" class="form-control" placeholder="Masukkan nama">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Pesan</label>
+                        <textarea class="form-control" rows="3" placeholder="Pesan atau pertanyaan Anda"></textarea>
+                    </div>
+
+                    <div class="d-grid gap-2 col-10 mx-auto py-2">
+                        <button class="btn btn-success" type="button">
+                            <i class="fab fa-whatsapp"></i> Kirim Pesan via WhatsApp
+                        </button>
+                    </div>
+
+                    <p class="text-center text-muted small">
+                        Langsung terhubung: <strong>+62 813-2422-6596</strong>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card Kanan (Informasi Kontak) -->
+            <div class="col-md-6">
+                <div class="card p-4 shadow-sm bg-success text-white">
+                    <h3 class="fw-bold mb-3">Informasi Kontak</h3>
+                    <p class="mb-4">
+                        Jika Anda mempunyai pertanyaan atau kekhawatiran, 
+                        Anda dapat menghubungi kami dengan mengisi formulir kontak,
+                        datang ke kantor kami, menemukan kami di jejaring sosial lain, 
+                        atau Anda menelepon kami :
+                    </p>
+
+                    <p class="mb-3">
+                        <i class="fab fa-whatsapp me-2"></i>
+                        +62 813-2492-6596
+                    </p>
+
+                    <p class="mb-5">
+                        <i class="fas fa-map-marker-alt me-2"></i>
+                        Jl. Boenoet Lembur Kuring, Puncak, Kec. Cigugur, Kabupaten Kuningan, Jawa Barat 45552
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<footer class="footer bg-dark text-white py-5">
+    <div class="container">
+        <div class="row">
+            <!-- Kolom Kiri -->
+            <div class="col-md-6 mb-4 mb-md-0">
+                <h5 class="fw-bold">Botanika</h5>
+                <p class="mb-2">View • Coffee • Food</p>
+                <div class="d-flex gap-3 mt-3">
+                    <a href="#" class="text-white fs-5"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-white fs-5"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-white fs-5"><i class="fab fa-youtube"></i></a>
+                </div>
+                <p class="mt-4 mb-0" style="font-size: 14px;">2025 © Botanika</p>
+            </div>
+            <!-- Kolom Kanan -->
+            <div class="col-md-6">
+                <h6 class="fw-semibold mb-3">Contact Center</h6>
+                <p class="mb-2">
+                    <i class="fas fa-map-marker-alt me-2"></i>
+                    Alamat: Jl. Boenoet Lembur Kuring, Puncak, Kec. Cigugur, Kabupaten Kuningan, Jawa Barat 45552
+                </p>
+                <p class="mb-0">
+                    <i class="fab fa-whatsapp me-2"></i>
+                    +62 813-2492-6596
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- SCRIPT LINKS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</body>
+</html>

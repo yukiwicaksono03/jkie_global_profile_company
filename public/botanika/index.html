@@ -1,0 +1,411 @@
+ <!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- Font Awesome (for footer icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <title>BOTANIKA</title>
+</head>
+
+<body>
+
+    <!-- NAVBAR: fixed-top agar menempel di atas -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top"> 
+        <div class="container-fluid px-5">
+            <a class="navbar-brand" href="#">
+                <!-- Logo Awal: Hijau (Pastikan ada logo_white.png di folder img/) -->
+                <img src="img/Botanika_White (1).png" alt="Botanika Logo" height="24" class="d-inline-block align-text-top">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About US</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="menu.html">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="event.html">Event</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="store.html">Store</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="bi bi-person-circle"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="hero" class="container">
+        <div class="row px-5">
+            <div class="col-lg-7 d-flex align-items-start flex-column justify-content-center">
+                <p class="fs-4 text-start fw-bold">Hallo Selamat datang</p>
+                <p class="fs-1 text-start fw-bold">Menikmati Setiap Tegukan Mengabadikan Setiap Sudut</p>
+                <p class="fs-6 text-start mt-3">Lebih dari sekadar kopi, sebuah destinasi. Tempat citarasa berpadu dengan
+                    keriaan dan inspirasi. Ciptakan ceritamu di rooftop dan spot foto unik kami</p>
+                <div class="d-flex gap-3">
+                    <button type="button" class="btn btn-success">Menu</button>
+                    <button type="button" class="btn btn-outline-success">Success</button>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <img src="img/logo-header.png " data-aos="fade-up-left" class="img-fluid">
+            </div>
+        </div>
+    </section>
+
+    <!-- KONTEN SECTION LAIN -->
+    <section id="jam-operasional" class="container my-5 text-center">
+        <h2 class="fw-bold mb-4">Jam Operasional</h2>
+        <div class="row g-4 d-flex justify-content-center">
+            <div class="col-md-4">
+                <div class="card p-4 h-100">
+                    <i class="bi bi-cup-hot fs-1 text-success"></i>
+                    <h5 class="fw-bold mt-2">Kedai</h5>
+                    <p class="mt-2 mb-0">Senin - Jumat: 10.00 - 21.00</p>
+                    <p class="mb-0">Sabtu: 10.00 - 22.00</p>
+                    <p>Minggu: 06.00 - 21.00</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-4 h-100">
+                    <i class="bi bi-tree fs-1 text-success"></i>
+                    <h5 class="fw-bold mt-2">Wahana</h5>
+                    <p class="mt-2 mb-0">Senin - Jumat: 10.00 - 17.00</p>
+                    <p class="mb-0">Weekend: 09.00 - 19.00</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container my-5 py-5">
+        <div class="row align-items-center">
+            <div class="col-md-6 mb-4 mb-md-0">
+                <img src="img/kuliner-Kopi-Botanika-a.jpg" alt="Tentang Kami" class="img-fluid rounded shadow-lg">
+            </div>
+            <div class="col-md-6">
+                <h2 class="fw-bold mb-3" style="color: #184D2B;">Tentang Kami</h2>
+                <p class="text-muted fs-6">
+                    BOTANIKA bukan sekadar kedai kopi — kami adalah ruang cerita, tempat di mana aroma kopi berpadu dengan
+                    kehangatan suasana. Terinspirasi dari alam dan komunitas, setiap sudut kedai kami dirancang untuk menghadirkan
+                    pengalaman yang tenang, hangat, dan penuh makna.
+                </p>
+                <p class="text-muted fs-6">
+                    Kami menghadirkan berbagai varian kopi pilihan dari petani lokal Indonesia, diracik dengan cinta oleh barista
+                    berpengalaman. Di BOTANIKA, setiap tegukan memiliki cerita, dan setiap pengunjung adalah bagian dari keluarga
+                    kami.
+                </p>
+                <div class="mt-4">
+                    <a href="about.html" class="btn btn-outline-success">Lihat Selengkapnya</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="container my-5">
+        <h2 class="text-center fw-bold mb-4" style="color: #184D2B;">Our Best Menu</h2>
+        <!-- Radio Button (Tersembunyi) -->
+        <input type="radio" name="menuFilter" id="coffee" hidden>
+        <input type="radio" name="menuFilter" id="noncoffee" hidden>
+        <input type="radio" name="menuFilter" id="food" checked hidden>
+        <input type="radio" name="menuFilter" id="snack" hidden>
+
+        <!-- Tombol Filter -->
+        <div class="d-flex justify-content-center mb-4 flex-wrap gap-2">
+            <label class="btn btn-outline-success" for="food">Food</label>
+            <label class="btn btn-outline-success" for="snack">Snack</label>
+            <label class="btn btn-outline-success" for="coffee">Coffee</label>
+            <label class="btn btn-outline-success" for="noncoffee">NonCoffee</label>
+        </div> 
+
+        <!-- Coffee -->
+        <div class="menu-group coffee">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card hover-card h-100">
+                        <img src="img/minuman (1).png" alt="Coffee Latte">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Caffe Latte</h5>
+                            <p class="card-text">Kopi lembut dengan susu hangat pilihan.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card hover-card h-100">
+                        <img src="img/minuman (1).png" alt="Espresso">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Espresso</h5>
+                            <p class="card-text">Rasa kopi kuat untuk penyuka cita rasa klasik.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card hover-card h-100">
+                        <img src="img/minuman (1).png" alt="Cappuccino">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Cappuccino</h5>
+                            <p class="card-text">Paduan espresso, susu, dan busa tebal.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card hover-card h-100">
+                        <img src="img/minuman (1).png" alt="Americano">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Americano</h5>
+                            <p class="card-text">Espresso klasik dengan tambahan air panas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- NonCoffee -->
+        <div class="menu-group noncoffee">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card hover-card h-100">
+                        <img src="img/minuman (1).png" alt="Matcha Latte">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Matcha Latte</h5>
+                            <p class="card-text">Racikan matcha premium dan susu lembut.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Food -->
+        <div class="menu-group food">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card hover-card h-100">
+                        <img src="img/makanan.png" alt="Pasta">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Creamy Pasta</h5>
+                            <p class="card-text">Pasta creamy lembut dengan topping keju.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card hover-card h-100">
+                        <img src="img/makanan.png" alt="Pasta">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Creamy Pasta</h5>
+                            <p class="card-text">Pasta creamy lembut dengan topping keju.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card hover-card h-100">
+                        <img src="img/makanan.png" alt="Pasta">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Creamy Pasta</h5>
+                            <p class="card-text">Pasta creamy lembut dengan topping keju.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card hover-card h-100">
+                        <img src="img/makanan.png" alt="Pasta">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Creamy Pasta</h5>
+                            <p class="card-text">Pasta creamy lembut dengan topping keju.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Snack -->
+        <div class="menu-group snack">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card hover-card h-100">
+                        <img src="img/makanan.png" alt="French Fries">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">French Fries</h5>
+                            <p class="card-text">Kentang goreng renyah dan gurih.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card hover-card h-100">
+                        <img src="img/makanan.png" alt="French Fries">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">French Fries</h5>
+                            <p class="card-text">Kentang goreng renyah dan gurih.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card hover-card h-100">
+                        <img src="img/makanan.png" alt="French Fries">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">French Fries</h5>
+                            <p class="card-text">Kentang goreng renyah dan gurih.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card hover-card h-100">
+                        <img src="img/makanan.png" alt="French Fries">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">French Fries</h5>
+                            <p class="card-text">Kentang goreng renyah dan gurih.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="event" class="py-5 bg-light">
+        <div class="container text-center">
+            <h2 class="fw-bold text-success mb-4">Event BOTANIKA</h2>
+            <p class="text-muted mb-5">Nikmati berbagai kegiatan menarik yang kami selenggarakan di BOTANIKA Coffee setiap
+                minggunya!</p>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <img src="img/kuliner-Kopi-Botanika-a.jpg" class="card-img-top" alt="Live Music Night">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">🎶 Live Music Night</h5>
+                            <p class="card-text text-muted">Rasakan suasana hangat ditemani alunan musik akustik lokal setiap Sabtu
+                                malam.</p>
+                            <p class="text-success fw-bold">Setiap Sabtu | 19.00 - 22.00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <img src="img/kuliner-Kopi-Botanika-a.jpg" class="card-img-top" alt="Workshop Latte Art">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">☕ Workshop Latte Art</h5>
+                            <p class="card-text text-muted">Belajar membuat seni latte bersama barista profesional kami dan dapatkan
+                                sertifikat!</p>
+                            <p class="text-success fw-bold">Minggu, 10 Desember 2025 | 09.00 - 12.00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <img src="img/kuliner-Kopi-Botanika-a.jpg" class="card-img-top" alt="Community Gathering">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">🌿 Community Gathering</h5>
+                            <p class="card-text text-muted">Temui komunitas pecinta kopi dan nikmati sharing session santai bersama.
+                            </p>
+                            <p class="text-success fw-bold">Setiap Minggu Pertama | 16.00 - 18.00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-4">
+                <a href="event.html" class="btn btn-outline-success">Lihat Selengkapnya</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-5">
+        <div class="container text-center">
+            <h2 class="fw-bold text-success mb-4">Galeri BOTANIKA</h2>
+            <p class="text-muted mb-5">Suasana, momen, dan kegiatan terbaik dari kedai kami ☕🎶</p>
+
+            <div class="row g-4">
+                <div class="col-md-4 col-sm-6">
+                    <img src="https://placehold.co/400x400/CCCCCC/FFFFFF?text=Gallery+1" class="img-fluid rounded shadow-sm" alt="Interior Coffee Shop">
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <img src="https://placehold.co/400x400/CCCCCC/FFFFFF?text=Gallery+2" class="img-fluid rounded shadow-sm" alt="Barista Membuat Kopi">
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="ratio ratio-16x9 rounded shadow-sm bg-dark">
+                        <video controls poster="https://placehold.co/400x225/CCCCCC/FFFFFF?text=Video+Thumb">
+                            Browser Anda tidak mendukung video tag.
+                        </video>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <img src="https://placehold.co/400x400/CCCCCC/FFFFFF?text=Gallery+3" class="img-fluid rounded shadow-sm" alt="Live Music">
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="ratio ratio-16x9 rounded shadow-sm">
+                        <iframe src="https://www.youtube.com/embed/9sUqCkzQIbE" title="Event Botanika" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <img src="https://placehold.co/400x400/CCCCCC/FFFFFF?text=Gallery+4" class="img-fluid rounded shadow-sm" alt="Outdoor Area">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <h5 class="fw-bold">Botanika</h5>
+                    <p class="mb-2">View • Coffee • Food</p>
+                    <div class="d-flex gap-3 mt-3">
+                        <a href="#" class="text-white fs-5"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white fs-5"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-white fs-5"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <p class="mt-4 mb-0" style="font-size: 14px;">2025 © Botanika</p>
+                </div>
+                <div class="col-md-6">
+                    <h6 class="fw-semibold mb-3">Contact Center</h6>
+                    <p class="mb-2">
+                        <i class="fas fa-map-marker-alt me-2"></i>
+                        Alamat: Jl. Boenoet Lembur Kuring, Puncak, Kec. Cigugur, Kabupaten Kuningan, Jawa Barat 45552
+                    </p>
+                    <p class="mb-0">
+                        <i class="fab fa-whatsapp me-2"></i>
+                        +62 813-2492-6596
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script AOS dan Bootstrap -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+    <!-- Link ke script.js harus diletakkan terakhir -->
+    <script src="script.js"></script>
+</body>
+
+</html>

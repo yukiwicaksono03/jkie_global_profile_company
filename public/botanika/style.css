@@ -1,0 +1,293 @@
+/* ===== RESET DASAR ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fafaf9;
+  color: #333;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar .nav-link {
+  color: #184D2B !important;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+  color: #0f361e !important;
+}
+
+.navbar .bi-person-circle {
+  font-size: 1.5rem;
+}
+
+/* Navbar scroll effect */
+.navbar.scrolled {
+  background-color: #184D2B !important;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+}
+
+.navbar.scrolled .nav-link {
+  color: #fff !important;
+}
+
+/* ===== HERO SECTION ===== */
+section.container:first-of-type {
+  padding: 100px 0;
+}
+
+section.container:first-of-type p.fs-1 {
+  color: #184D2B;
+}
+
+/* ===== BUTTON STYLE ===== */
+.btn-success {
+  background-color: #184D2B;
+  border-radius: 10px;
+}
+
+.btn-success:hover {
+  background-color: #146E37;
+}
+
+.btn-outline-success {
+  border-color: #184D2B;
+  color: #184D2B;
+  border-radius: 10px;
+  padding: 8px 20px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-success:hover {
+  background-color: #184D2B;
+  color: #fff;
+}
+
+/* ===== SECTION CARD, EVENT, MENU DLL (Tidak diubah, tetap bagus) ===== */
+.hover-card,
+.event-card {
+  transition: 0.3s ease;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .navbar-brand img {
+    height: 20px;
+  }
+
+  section.container:first-of-type {
+    padding: 60px 0;
+  }
+}
+
+/* ==== ATUR KHUSUS UNTUK MENU SAJA ==== */
+#menu .card {
+  margin: auto;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.3s ease;
+  border: none;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+/* ==== ATUR GAMBAR MENU ==== */
+#menu .card img {
+  width: 100%;
+  /* height: 180px; */ /* Kita hapus tinggi tetap */
+  aspect-ratio: 1 / 1; /* Ini kuncinya! Membuat kotak gambar selalu 1:1 (persegi) */
+  object-fit: contain; /* Ini akan 'memuat' seluruh gambar PNG di dalam kotak, tanpa memotong */
+  display: block;
+  padding: 1rem; /* Opsional: beri jarak agar PNG tidak mepet ke tepi kotak */
+  background-color: #f8f9fa; /* Opsional: beri warna dasar agar kotak terlihat */
+}
+
+/* ==== HOVER EFEK ==== */
+#menu .card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* ==== RESPONSIVE MENU ==== */
+@media (max-width: 768px) {
+  #menu .card img {
+    height: 160px; /* Sedikit lebih kecil di mobile */
+  }
+}
+
+/* ===== STYLING UNTUK FILTER MENU ===== */
+/* Sembunyikan radio button asli */
+#menu input[type="radio"] {
+  display: none;
+}
+
+/* Sembunyikan semua grup menu secara default */
+#menu .menu-group {
+  display: none;
+}
+
+/* Tampilkan grup yang sesuai saat radio dicek */
+#menu #coffee:checked ~ .menu-group.coffee,
+#menu #noncoffee:checked ~ .menu-group.noncoffee,
+#menu #food:checked ~ .menu-group.food,
+#menu #snack:checked ~ .menu-group.snack {
+  display: block;
+}
+
+/* Styling untuk label (tombol filter) */
+#menu .btn-outline-success {
+  border-radius: 20px;
+  padding: 8px 20px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+/* Styling untuk tombol filter yang aktif (dicek) */
+#menu input[type="radio"]:checked + .btn-outline-success {
+  background-color: #184D2B;
+  color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* HALAMAN MENU */
+/* ==== CARD MENU ==== */
+#nav-Menu .card {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.3s ease-in-out;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+/* ==== GAMBAR MENU RESPONSIF ==== */
+#nav-Menu .card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  padding: 1rem;
+  background: #f8f9fa;
+}
+
+/* ==== HOVER EFEK ==== */
+#nav-Menu .card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ==== FILTER BUTTON ==== */
+#nav-Menu input[type="radio"] {
+  display: none;
+}
+
+#nav-Menu .btn-outline-success {
+  border-radius: 20px;
+  padding: 8px 20px;
+  transition: .3s;
+}
+
+/* ==== Aktifkan style pada label ketika radio di-check ==== */
+#nav-Menu input[type="radio"]:checked + .btn-outline-success {
+  background: #184D2B;
+  color: #fff;
+  border-color: #184D2B;
+}
+
+/* ==== SEMUA MENU DISEMBUNYIKAN TERLEBIH DULU ==== */
+#nav-Menu .Menu-group {
+  display: none;
+}
+
+/* ==== TAMPILKAN MENU SESUAI PILIHAN ==== */
+#All:checked ~ .Menu-group.all,
+#Food:checked ~ .Menu-group.food,
+#Snack:checked ~ .Menu-group.snack,
+#Coffe:checked ~ .Menu-group.coffe,
+#NonCoffee:checked ~ .Menu-group.noncoffee {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  #nav-Menu .card img {
+    height: 160px; /* Sedikit lebih kecil di mobile */
+  }
+}
+
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  text-align: center;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.05);
+}
+
+/* --- Tambahkan CSS ini untuk HP --- */
+@media (max-width: 600px) {
+  .gallery-grid {
+      grid-template-columns: repeat(2, 1fr); /* Jadi 2 kolom */
+      gap: 12px;
+  }
+
+  .gallery-item img {
+      height: 150px; /* biar proporsional di HP */
+  }
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
