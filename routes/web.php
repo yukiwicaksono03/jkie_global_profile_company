@@ -20,7 +20,7 @@ Route::middleware(['guest'])->group(function () {
 
 Route::get('/', [HomeController::class, "index"])->name('home');
 Route::get('/about', [HomeController::class, "about"])->name('about');
-Route::get('/menu', [HomeController::class, "menu"])->name('menu');
+Route::get('/menu/{flag}', [HomeController::class, "menu"])->name('menu');
 Route::get('/menu_detail/{id}', [HomeController::class, "menu_detail"])->name('menu_detail');
 Route::get('/event', [HomeController::class, "event"])->name('event');
 Route::get('/facility', [HomeController::class, "facility"])->name('facility');
@@ -40,13 +40,13 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/home', [DashboardController::class, "index"])->name('dashboard');
         Route::get('/event', [EventController::class, "index"])->name('admin.event');
         Route::get('/facility', [FacilityController::class, "index"])->name('admin.facility');
-        Route::get('/menu', [MenuController::class, "index"])->name('admin.menu');
+        Route::get('/menu/{flag}', [MenuController::class, "index"])->name('admin.menu');
         Route::get('/category', [CategoryController::class, "index"])->name('admin.category');
         
         // form
         Route::get('/facility/add', [FacilityController::class, "create"])->name('admin.facility.create');
         Route::get('/event/add', [EventController::class, "create"])->name('admin.event.create');
-        Route::get('/menu/add', [MenuController::class, "create"])->name('admin.menu.create');
+        Route::get('/menu/add/{flag}', [MenuController::class, "create"])->name('admin.menu.create');
         Route::get('/category/add', [CategoryController::class, "create"])->name('admin.category.create');
         
         Route::get('/facility/update/{id}', [FacilityController::class, "edit"])->name('admin.facility.edit');

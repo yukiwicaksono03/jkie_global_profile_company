@@ -31,10 +31,10 @@ class HomeController extends Controller
         $slider = Slider::latest()->get();
         return view('about', ["master" => $master, "facilities" => $facilities, "wisata" => $wisata, "slider" => $slider]);
     }
-    public function menu(Request $request){
+    public function menu(Request $request, $flag){
         $master = Master::latest()->first();
         $category = Categories::latest()->get();
-        $menuQuery = Menu::with('category')->latest();
+        $menuQuery = Menu::with('category')->where('flag','=',$flag)->latest();
         $slider = Slider::latest()->get();
 
         if ($request->has('category') && $request->category != '') {
@@ -48,10 +48,12 @@ class HomeController extends Controller
     {
         $master = Master::latest()->first();
         $menu = Menu::findOrFail($id);
+        $slider = Slider::latest()->get();
         // dd($menu);
         return view('menu_detail', [
             'master' => $master,
-            'menu' => $menu
+            'menu' => $menu,
+            'slider' => $slider,
         ]);
     }
 

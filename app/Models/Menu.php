@@ -14,7 +14,8 @@ class Menu extends Model
         'desc',
         'path',
         "price",
-        "is_best"
+        "is_best",
+        "flag"
     ];
     
     public function category()

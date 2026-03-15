@@ -12,7 +12,7 @@
                 @method('PUT')
             @endif
             <div class="row form-group">
-                <div class="col col-md-3"><label class=" form-control-label">Foto</label></div>
+                <div class="col col-md-3"><label class=" form-control-label">Video</label></div>
                 <div class="col-12 col-md-9">
                     <input type="file" name="path" class="form-control">
                     @error('path')
@@ -26,9 +26,10 @@
                 </div>
             </div>
             <div class="row form-group">
-                <div class="col col-md-3"><label class=" form-control-label">Deskripsi</label></div>
+                <div class="col col-md-3"><label class=" form-control-label">Nama Video</label></div>
                 <div class="col-12 col-md-9">
-                    <textarea name="desc" class="form-control" rows="4" placeholder="Masukkan teks di sini">{{ old('desc', isset($slider) ? $slider->desc : '') }}</textarea>
+                    <input name="desc" class="form-control" placeholder="Masukkan Nama Video" value="{{ old('desc', isset($slider) ? $slider->desc : '') }}">
+
                     @error('desc')
                         <small class="text-danger">{{ $message }}</small>
                     @enderror

@@ -9,11 +9,11 @@ use Illuminate\Support\Facades\Storage;
 
 class MenuController extends Controller
 {
-    public function index(){
-        $menus = Menu::with('category')->latest()->paginate(10);
+    public function index($flag){
+        $menus = Menu::with('category')->where('flag','=',$flag)->latest()->paginate(10);
         return view("dashboard-menu", compact("menus"));
     }
-    public function create(){
+    public function create($flag){
         $categories = Categories::all();
         return view("input.menu", compact("categories"));
     }
@@ -28,11 +28,10 @@ class MenuController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'category_id' => 'required|exists:categories,id',
             'name'        => 'required|string|max:255',
             'desc'        => 'required|string',
-            'price'        => 'required|numeric',
             'path'        => 'required|image|mimes:jpg,jpeg,png,webp|max:2048',
+            'flag'        => '',
         ]);
 
         $filePath = null;
@@ -41,15 +40,16 @@ class MenuController extends Controller
         }
 
         Menu::create([
-            'category_id' => $request->category_id,
+            'category_id' => 1,
+            'price' => 1,
+            'is_best'   => 1,
             'name'        => $request->name,
             'desc'        => $request->desc,
-            'price'        => $request->price,
             'path'        => $filePath,
-            'is_best'     => $request->is_best,
+            'flag'        => $request->flag,
         ]);
 
-        return redirect()->route('admin.menu')->with('success', 'Menu berhasil ditambahkan!');
+        return redirect()->route('admin.menu', ['flag' => $request->flag])->with('success', 'Menu berhasil ditambahkan!');
     }
 
 
@@ -58,10 +58,8 @@ class MenuController extends Controller
         $menu = Menu::findOrFail($id);
 
         $request->validate([
-            'category_id' => 'required|exists:categories,id',
             'name'        => 'required|string|max:255',
             'desc'        => 'required|string',
-            'price'        => 'required|numeric',
             'path'        => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
         ]);
 
@@ -76,12 +74,13 @@ class MenuController extends Controller
         }
 
         $menu->update([
-            'category_id' => $request->category_id,
+            'category_id' => 1,
+            'price' => 1,
+            'is_best'   => 1,
             'name'        => $request->name,
             'desc'        => $request->desc,
-            'price'        => $request->price,
             'path'        => $filePath,
-            'is_best'     => $request->is_best,
+            'flag'        => $request->flag,
         ]);
 
         return redirect()->route('admin.menu')->with('success', 'Menu berhasil diperbarui!');

@@ -46,13 +46,13 @@
 
 .hero-wrapper {
     position: relative;
-    height: 76vh;
+    height: 100vh;
 }
 
 #bgSlider,
 #bgSlider .carousel-inner,
 #bgSlider .carousel-item {
-    height: 76vh;
+    height: 100vh;
 }
 
 @media (max-width:768px){
@@ -97,19 +97,15 @@
         <!-- LEFT MENU -->
         <ul class="navbar-nav fs-5">
             <li class="nav-item">
-                <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" href="/">Home</a>
+                <a class="nav-link {{ Request::is('about') ? 'active' : '' }}" href="/about">WHO ARE WE</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link {{ Request::is('about') ? 'active' : '' }}" href="/about">About Us</a>
+                <a class="nav-link {{ Request::is('menu/1') ? 'active' : '' }}" href="/menu/1">SERVICE & PRODUCTS</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link {{ Request::is('menu') ? 'active' : '' }}" href="/menu">Core Services</a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link {{ Request::is('menu') ? 'active' : '' }}" href="/menu">News</a>
+                <a class="nav-link {{ Request::is('menu/2') ? 'active' : '' }}" href="/menu/2">INSIGHTS</a>
             </li>
         </ul>
 
@@ -117,17 +113,24 @@
         <!-- DESKTOP CENTER LOGO -->
         <a class="navbar-brand d-none d-lg-block text-center"
            href="/"
-           style="margin-left: 10%; margin-top:-20px;margin-bottom:-20px;">
+           style="margin-left: -10%; margin-top:-20px;margin-bottom:-20px;">
             <img src="{{ asset('images/jkie_logo.png') }}" height="80">
         </a>
 
 
         <!-- RIGHT MENU -->
         <ul class="navbar-nav fs-5">
-            <li class="nav-item"><a class="nav-link" href="#">Oil & Gas</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Renewables</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Join Our Team</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+            <li class="nav-item">
+                <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" href="/">CLIENTS</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link {{ Request::is('about') ? 'active' : '' }}" href="/about">CAREERS</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link {{ Request::is('menu') ? 'active' : '' }}" href="/menu">CONTACT</a>
+            </li>
         </ul>
 
     </div>

@@ -1,10 +1,10 @@
 <div class="container" style="margin-top: 20px;">
-    <p class="fw-bold text-center fs-2 mb-3">
+    <!-- <p class="fw-bold text-center fs-2 mb-3">
         Our Core Services
     </p>
     <p class="text-center fs-6 mb-5">
         {{ $master->desc_our_menu_home }}
-    </p>
+    </p> -->
     <div class="row d-flex justify-content-center gap-3 align-items-stretch">
         @foreach ($menu as $item)
             <div class="p-2 col-lg-4 mb-4">

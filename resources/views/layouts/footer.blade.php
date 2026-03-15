@@ -9,14 +9,13 @@
                     {{ $master->desc }}
                 </p>
                 <p class="fs-6">
-                    Head Office : <br>
-                    Jl. Gebang Mas 1, B3 No 37B, Cakung, Jakarta Timur
+                    PLAZA AMINTA OFFICE, 2ND FLOOR SUIT 208, JL. TB SIMATUPANG KAV. 10, JAKARTA 12310, Jakarta Selatan 12310, DKI Jakarta , Indonesia
                 </p>
                 <p class="fs-6 mt-3">
-                    2026 &copy; Berma
+                    2026 &copy; JK Inspection Engineering Co., Ltd
                 </p>
             </div>
-            <div class="col-lg-6">
+            <!-- <div class="col-lg-6">
                 <p class="fs-6">
                     Contact Center
                 </p>
@@ -39,7 +38,7 @@
                     </a>
 
                 </p>
-            </div>
+            </div> -->
         </div>
     </div>
 </nav>

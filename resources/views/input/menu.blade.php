@@ -1,12 +1,22 @@
 @extends('layouts.dashboard-main')
 @section('main')
+@php
+$flag = request('flag');
+$title = '';
+if($flag == 1){
+    $title = 'SERVICE & PRODUCTS';
+}elseif($flag == 2){
+    $title = 'INSIGHTS';
+}
+@endphp
 <div class="card">
     <div class="card-header">
-        <strong>Menu</strong>
+        <strong>TAMBAH {{$title}}</strong>
     </div>
     <form action="{{ isset($menu) ? route('admin.menu.update', $menu->id) : route('admin.menu.store') }}" method="POST" enctype="multipart/form-data" class="form-horizontal">
         <div class="card-body card-block">
             @csrf
+            <input type="hidden" name="flag" value="{{ request('flag') }}">
 
             @if(isset($menu))
                 @method('PUT')
@@ -23,7 +33,7 @@
                     @enderror
                 </div>
             </div>
-            <div class="row form-group">
+            <!-- <div class="row form-group">
                 <div class="col col-md-3"><label class=" form-control-label">Harga</label></div>
                 <div class="col-12 col-md-9">
                     <input type="text" name="price" class="form-control"
@@ -33,7 +43,7 @@
                         <small class="text-danger">{{ $message }}</small>
                     @enderror
                 </div>
-            </div>
+            </div> -->
             <div class="row form-group">
                 <div class="col col-md-3"><label class=" form-control-label">Deskripsi</label></div>
                 <div class="col-12 col-md-9">
@@ -43,7 +53,7 @@
                     @enderror
                 </div>
             </div>
-            <div class="row form-group">
+            <!-- <div class="row form-group">
                 <div class="col col-md-3"><label for="select" class=" form-control-label">Kategori</label></div>
                 <div class="col-12 col-md-9">
                     <select name="category_id" class="form-control">
@@ -71,7 +81,7 @@
                         <small class="text-danger">{{ $message }}</small>
                     @enderror
                 </div>
-            </div>
+            </div> -->
             <div class="row form-group">
                 <div class="col col-md-3"><label class=" form-control-label">Foto</label></div>
                 <div class="col-12 col-md-9">

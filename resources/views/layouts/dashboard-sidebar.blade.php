@@ -13,48 +13,25 @@
                     <li class="{{ Request::is('admin/home') ? 'active' : '' }}">
                         <a href="/admin/home"><i class="menu-icon fa fa-dashboard"></i>Home</a>
                     </li>
-                    <li class="menu-item-has-children dropdown {{ Request::is('admin/slider*') || Request::is('admin/gallery*') ? 'show' : '' }}">
-                        <a href="#"
-                        class="dropdown-toggle"
-                        data-toggle="dropdown"
-                        aria-haspopup="true"
-                        aria-expanded="{{ Request::is('admin/slider*') || Request::is('admin/gallery*') ? 'true' : 'false' }}">
-                            <i class="menu-icon fa fa-photo"></i>Photos
-                        </a>
-
-                        <ul class="sub-menu children dropdown-menu {{ Request::is('admin/slider*') || Request::is('admin/gallery*') ? 'show' : '' }}">
-                            <li class="{{ Request::is('admin/slider*') ? 'active' : '' }}">
-                                <i class="menu-icon fa fa-home"></i>
-                                <a href="/admin/slider">Slider Home</a>
-                            </li>
-
-                            <li class="{{ Request::is('admin/gallery*') ? 'active' : '' }}">
-                                <i class="menu-icon fa fa-photo"></i>
-                                <a href="/admin/gallery">Gallery</a>
-                            </li>
-
-                            <li class="{{ Request::is('admin/entertainment*') ? 'active' : '' }}">
-                                <i class="menu-icon fa fa-car"></i>
-                                <a href="/admin/entertainment">Wahana</a>
-                            </li>
-                        </ul>
+                    <li class="{{ Request::is('admin/slider') ? 'active' : '' }}">
+                        <a href="/admin/slider"><i class="menu-icon fa fa-home"></i>Slider Home (Video)</a>
                     </li>
 
-                    <li class="{{ Request::is('admin/event') ? 'active' : '' }}">
-                        <a href="/admin/event"><i class="menu-icon fa fa-align-left"></i>Event</a>
+                    <li class="{{ Request::is('admin/menu/1') ? 'active' : '' }}">
+                        <a href="/admin/menu/1"><i class="menu-icon fa fa-align-left"></i>SERVICE & PRODUCTS</a>
                     </li>
 
-                    <li class="{{ Request::is('admin/menu') ? 'active' : '' }}">
-                        <a href="/admin/menu"><i class="menu-icon fa fa-shopping-cart"></i>Menu</a>
+                    <li class="{{ Request::is('admin/menu/2') ? 'active' : '' }}">
+                        <a href="/admin/menu/2"><i class="menu-icon fa fa-shopping-cart"></i>INSIGHTS</a>
                     </li>
 
-                    <li class="{{ Request::is('admin/category') ? 'active' : '' }}">
+                    <!-- <li class="{{ Request::is('admin/category') ? 'active' : '' }}">
                         <a href="/admin/category"><i class="menu-icon fa fa-archive"></i>Kategori</a>
                     </li>
 
                     <li class="{{ Request::is('admin/facility') ? 'active' : '' }}">
                         <a href="/admin/facility"><i class="menu-icon fa fa-info"></i>Fasilitas</a>
-                    </li>
+                    </li> -->
                     <li class="{{ Request::is('login-admin') ? 'active' : '' }}">
                         <a href="#"
                             onclick="event.preventDefault(); 

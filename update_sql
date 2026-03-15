@@ -1,4 +1,1 @@
-ALTER TABLE masters CHANGE foto_sejarah foto_sejarah_1 varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL;
-ALTER TABLE masters ADD foto_sejarah_2 varchar(191) NULL;
-ALTER TABLE masters ADD foto_sejarah_3 varchar(191) NULL;
-ALTER TABLE masters ADD foto_sejarah_4 varchar(191) NULL;
+alter table menus add flag int4 default null;
