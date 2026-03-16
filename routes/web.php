@@ -24,6 +24,9 @@ Route::get('/menu/{flag}', [HomeController::class, "menu"])->name('menu');
 Route::get('/menu_detail/{id}', [HomeController::class, "menu_detail"])->name('menu_detail');
 Route::get('/event', [HomeController::class, "event"])->name('event');
 Route::get('/facility', [HomeController::class, "facility"])->name('facility');
+Route::get('/clients', [HomeController::class, "clients"])->name('clients');
+Route::get('/contact', [HomeController::class, "contact"])->name('contact');
+Route::get('/careers', [HomeController::class, "careers"])->name('careers');
 
 Route::middleware(['auth'])->group(function () {
     Route::post('/logout', [LoginController::class, 'logout'])->name('logout');

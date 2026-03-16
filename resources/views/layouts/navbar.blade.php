@@ -121,15 +121,15 @@
         <!-- RIGHT MENU -->
         <ul class="navbar-nav fs-5">
             <li class="nav-item">
-                <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" href="/">CLIENTS</a>
+                <a class="nav-link {{ Request::is('/clients') ? 'active' : '' }}" href="/clients">CLIENTS</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link {{ Request::is('about') ? 'active' : '' }}" href="/about">CAREERS</a>
+                <a class="nav-link {{ Request::is('careers') ? 'active' : '' }}" href="/careers">CAREERS</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link {{ Request::is('menu') ? 'active' : '' }}" href="/menu">CONTACT</a>
+                <a class="nav-link {{ Request::is('contact') ? 'active' : '' }}" href="/contact">CONTACT</a>
             </li>
         </ul>
 

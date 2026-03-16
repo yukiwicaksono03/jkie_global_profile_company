@@ -77,4 +77,28 @@ class HomeController extends Controller
             'events' => $events
         ]);
     }
+
+    public function clients(){
+        $master = Master::latest()->first();
+        $facilities = Facility::latest()->get();
+        $wisata = Entertainment::latest()->get();
+        $slider = Slider::latest()->get();
+        return view('clients', ["master" => $master, "facilities" => $facilities, "wisata" => $wisata, "slider" => $slider]);
+    }
+
+    public function contact(){
+        $master = Master::latest()->first();
+        $facilities = Facility::latest()->get();
+        $wisata = Entertainment::latest()->get();
+        $slider = Slider::latest()->get();
+        return view('contact', ["master" => $master, "facilities" => $facilities, "wisata" => $wisata, "slider" => $slider]);
+    }
+
+    public function careers(){
+        $master = Master::latest()->first();
+        $facilities = Facility::latest()->get();
+        $wisata = Entertainment::latest()->get();
+        $slider = Slider::latest()->get();
+        return view('careers', ["master" => $master, "facilities" => $facilities, "wisata" => $wisata, "slider" => $slider]);
+    }
 }
