@@ -114,7 +114,7 @@
         <a class="navbar-brand d-none d-lg-block text-center"
            href="/"
            style="margin-left: -10%; margin-top:-20px;margin-bottom:-20px;">
-            <img src="{{ asset('images/jkie_logo.png') }}" height="80">
+            <img src="{{ asset('images/jkie_logo.jpeg') }}" height="80">
         </a>
 
 
