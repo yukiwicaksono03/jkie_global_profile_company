@@ -33,10 +33,10 @@ class MenuController extends Controller
         $request->validate([
             'name'        => 'required|string|max:255',
             'desc'        => 'required|string',
-            'path_1'        => 'required|image|mimes:jpg,jpeg,png,webp|max:2048',
-            'path_2'        => 'required|image|mimes:jpg,jpeg,png,webp|max:2048',
-            'path_3'        => 'required|image|mimes:jpg,jpeg,png,webp|max:2048',
-            'path_4'        => 'required|image|mimes:jpg,jpeg,png,webp|max:2048',
+            'path_1'        => 'image|mimes:jpg,jpeg,png,webp|max:2048',
+            'path_2'        => 'image|mimes:jpg,jpeg,png,webp|max:2048',
+            'path_3'        => 'image|mimes:jpg,jpeg,png,webp|max:2048',
+            'path_4'        => 'image|mimes:jpg,jpeg,png,webp|max:2048',
             'flag'        => '',
         ]);
 
@@ -78,10 +78,10 @@ class MenuController extends Controller
         $request->validate([
             'name'        => 'required|string|max:255',
             'desc'        => 'required|string',
-            'path_1'        => 'required|image|mimes:jpg,jpeg,png,webp|max:2048',
-            'path_2'        => 'required|image|mimes:jpg,jpeg,png,webp|max:2048',
-            'path_3'        => 'required|image|mimes:jpg,jpeg,png,webp|max:2048',
-            'path_4'        => 'required|image|mimes:jpg,jpeg,png,webp|max:2048',
+            'path_1'        => 'image|mimes:jpg,jpeg,png,webp|max:2048',
+            'path_2'        => 'image|mimes:jpg,jpeg,png,webp|max:2048',
+            'path_3'        => 'image|mimes:jpg,jpeg,png,webp|max:2048',
+            'path_4'        => 'image|mimes:jpg,jpeg,png,webp|max:2048',
         ]);
 
         $filePath1 = $filePath2 = $filePath3 = $filePath4 = $menu->path;
