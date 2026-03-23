@@ -13,7 +13,7 @@ if($flag == 1){
     <div class="card-header">
         <strong>TAMBAH {{$title}}</strong>
     </div>
-    <form action="{{ isset($menu) ? route('admin.menu.update', $menu->id) : route('admin.menu.store') }}" method="POST" enctype="multipart/form-data" class="form-horizontal">
+    <form action="{{ isset($menu) ? route('admin.menu.update', ['flag' => $flag, 'id' => $menu->id]) : route('admin.menu.store', ['flag' => $flag]) }}" method="POST" enctype="multipart/form-data" class="form-horizontal">
         <div class="card-body card-block">
             @csrf
             <input type="hidden" name="flag" value="{{ request('flag') }}">

@@ -11,21 +11,24 @@ class MenuController extends Controller
 {
     public function index($flag){
         $menus = Menu::with('category')->where('flag','=',$flag)->latest()->paginate(10);
-        return view("dashboard-menu", compact("menus"));
+
+        return view('dashboard-menu', compact('menus', 'flag'));
     }
     public function create($flag){
         $categories = Categories::all();
-        return view("input.menu", compact("categories"));
+
+        return view('input.menu', compact('categories', 'flag'));
     }
     
-    public function edit($id)
+    public function edit($flag, $id)
     {
         $menu = Menu::findOrFail($id);
         $categories = Categories::all();
-        return view('input.menu', compact('menu', 'categories'));
+
+        return view('input.menu', compact('menu', 'categories', 'flag'));
     }
 
-    public function store(Request $request)
+    public function store(Request $request, $flag)
     {
         $request->validate([
             'name'        => 'required|string|max:255',
@@ -53,7 +56,7 @@ class MenuController extends Controller
     }
 
 
-    public function update(Request $request, $id)
+    public function update(Request $request, $flag, $id)
     {
         $menu = Menu::findOrFail($id);
 
@@ -82,11 +85,10 @@ class MenuController extends Controller
             'path'        => $filePath,
             'flag'        => $request->flag,
         ]);
-
-        return redirect()->route('admin.menu')->with('success', 'Menu berhasil diperbarui!');
+        return redirect()->route('admin.menu', ['flag' => $request->flag])->with('success', 'Menu berhasil diperbarui!');
     }
 
-    public function destroy($id)
+    public function destroy($flag, $id)
     {
         $menu = Menu::findOrFail($id);
 
@@ -96,6 +98,6 @@ class MenuController extends Controller
 
         $menu->delete();
 
-        return redirect()->route('admin.menu')->with('success', 'Menu berhasil dihapus!');
+        return redirect()->route('admin.menu', ['flag' => $request->flag])->with('success', 'Menu berhasil dihapus!');
     }
 }

@@ -49,31 +49,31 @@ Route::middleware(['auth'])->group(function () {
         // form
         Route::get('/facility/add', [FacilityController::class, "create"])->name('admin.facility.create');
         Route::get('/event/add', [EventController::class, "create"])->name('admin.event.create');
-        Route::get('/menu/add/{flag}', [MenuController::class, "create"])->name('admin.menu.create');
+        Route::get('/menu/add/{flag}/', [MenuController::class, "create"])->name('admin.menu.create');
         Route::get('/category/add', [CategoryController::class, "create"])->name('admin.category.create');
         
         Route::get('/facility/update/{id}', [FacilityController::class, "edit"])->name('admin.facility.edit');
         Route::get('/event/update/{id}', [EventController::class, "edit"])->name('admin.event.edit');
-        Route::get('/menu/update/{id}', [MenuController::class, "edit"])->name('admin.menu.edit');
+        Route::get('/menu/{flag}/update/{id}', [MenuController::class, "edit"])->name('admin.menu.edit');
         Route::get('/category/update/{id}', [CategoryController::class, "edit"])->name('admin.category.edit');
         
         // create
         Route::post('/event/store', [EventController::class, "store"])->name('admin.event.store');
         Route::post('/facility/store', [FacilityController::class, "store"])->name('admin.facility.store');
-        Route::post('/menu/store', [MenuController::class, "store"])->name('admin.menu.store');
+        Route::post('/menu/store/{flag}', [MenuController::class, "store"])->name('admin.menu.store');
         Route::post('/category/store', [CategoryController::class, "store"])->name('admin.category.store');
         
         // update
         Route::post('/master/update', [DashboardController::class, "update"])->name('master.update');
         Route::put('/event/update/{id}', [EventController::class, "update"])->name('admin.event.update');
         Route::put('/facility/update/{id}', [FacilityController::class, "update"])->name('admin.facility.update');
-        Route::put('/menu/update/{id}', [MenuController::class, "update"])->name('admin.menu.update');
+        Route::put('/menu/{flag}/update/{id}', [MenuController::class, "update"])->name('admin.menu.update');
         Route::put('/category/update/{id}', [CategoryController::class, "update"])->name('admin.category.update');
         
         // delete
         Route::delete('/facility/delete/{id}', [FacilityController::class, "destroy"])->name('admin.facility.delete');
         Route::delete('/event/delete/{id}', [EventController::class, "destroy"])->name('admin.event.delete');
-        Route::delete('/menu/delete/{id}', [MenuController::class, "destroy"])->name('admin.menu.delete');
+        Route::delete('/menu/{flag}/delete/{id}', [MenuController::class, "destroy"])->name('admin.menu.delete');
         Route::delete('/category/delete/{id}', [CategoryController::class, "destroy"])->name('admin.category.delete');
 
         Route::resource('gallery', GalleryController::class);

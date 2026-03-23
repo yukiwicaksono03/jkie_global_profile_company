@@ -33,19 +33,11 @@ if($flag == 1){
                         <th scope="row">{{ $menus->firstItem() + $loop->index }}</th>
                         <td>{{ $menu->name }}</td>
                         <td>{{ $menu->desc }}</td>
-                        <!-- <td>{{ $menu->category->name }}</td>
                         <td>
-                            @if ($menu->is_best)
-                                <span class="badge badge-success">Ya</span>
-                                @else
-                                <span class="badge badge-danger">Tidak</span>
-                            @endif
-                        </td> -->
-                        <td>
-                            <a href="/admin/menu/update/{{ $menu->id }}">
+                            <a href="{{ route('admin.menu.update', ['flag' => $flag, 'id' => $menu->id]) }}">
                                 <span class="badge badge-info">Edit</span>
                             </a>
-                            <form action="{{ route('admin.menu.delete', $menu->id) }}" method="POST" class="d-inline" onsubmit="return confirm('Apakah anda yakin ingin menghapus menu ini?');">
+                            <form action="{{ route('admin.menu.delete', ['flag' => $flag, 'id' => $menu->id]) }}" method="POST" class="d-inline" onsubmit="return confirm('Apakah anda yakin ingin menghapus menu ini?');">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="badge badge-warning border-0" style="cursor:pointer">
