@@ -84,14 +84,35 @@ if($flag == 1){
             </div> -->
             <div class="row form-group">
                 <div class="col col-md-3"><label class=" form-control-label">Foto</label></div>
-                <div class="col-12 col-md-9">
-                    <input type="file" name="path" class="form-control">
-                    @error('path')
-                    <small class="text-danger">{{ $message }}</small>
-                    @enderror
-                    @if (isset($menu) && $menu->path)
+                <div class="col-12 col-md-2">
+                    <input type="file" name="path_1" class="form-control">
+                    @if (isset($menu) && $menu->path_1)
                         <div class="mt-5" id="preview-wrapper">
-                            <img src="{{ asset('storage/app/public/'.$menu->path) }}" alt="Preview" class="img-thumbnail">
+                            <img src="{{ asset('storage/app/public/'.$menu->path_1) }}" alt="Preview" class="img-thumbnail">
+                        </div>
+                    @endif
+                </div>
+                <div class="col-12 col-md-2">
+                    <input type="file" name="path_2" class="form-control">
+                    @if (isset($menu) && $menu->path_2)
+                        <div class="mt-5" id="preview-wrapper">
+                            <img src="{{ asset('storage/app/public/'.$menu->path_2) }}" alt="Preview" class="img-thumbnail">
+                        </div>
+                    @endif
+                </div>
+                <div class="col-12 col-md-2">
+                    <input type="file" name="path_3" class="form-control">
+                    @if (isset($menu) && $menu->path_3)
+                        <div class="mt-5" id="preview-wrapper">
+                            <img src="{{ asset('storage/app/public/'.$menu->path_3) }}" alt="Preview" class="img-thumbnail">
+                        </div>
+                    @endif
+                </div>
+                <div class="col-12 col-md-2">
+                    <input type="file" name="path_4" class="form-control">
+                    @if (isset($menu) && $menu->path_4)
+                        <div class="mt-5" id="preview-wrapper">
+                            <img src="{{ asset('storage/app/public/'.$menu->path_4) }}" alt="Preview" class="img-thumbnail">
                         </div>
                     @endif
                 </div>

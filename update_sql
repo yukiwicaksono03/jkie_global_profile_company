@@ -1,1 +1,6 @@
 alter table menus add flag int4 default null;
+ALTER TABLE menus DROP COLUMN `path`;
+ALTER TABLE menus add path_1 text default null;
+ALTER TABLE menus add path_2 text default null;
+ALTER TABLE menus add path_3 text default null;
+ALTER TABLE menus add path_4 text default null;
