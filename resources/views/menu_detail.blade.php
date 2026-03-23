@@ -7,7 +7,7 @@
     <div class="row d-flex justify-content-center gap-3 align-items-stretch">
             
                     <div class="ratio ratio-4x3" style="width:50%">
-                        <img src="{{ asset('storage/'.$menu->path) }}"
+                        <img src="{{ asset('storage/app/public/menus/'.$menu->path) }}"
                             class="rounded"
                             style="width:100%; height:100%; object-fit:cover;"
                             alt="foto menu" >
