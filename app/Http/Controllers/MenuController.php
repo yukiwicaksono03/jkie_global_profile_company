@@ -85,46 +85,50 @@ class MenuController extends Controller
         ]);
 
         $filePath1 = $filePath2 = $filePath3 = $filePath4 = $menu->path;
-        if (($request->hasFile('path_1')) && ($menu->path_1 != '')) {
-            if ($menu->path_1 && Storage::disk('public')->exists($menu->path_1)) {
-                Storage::disk('public')->delete($menu->path_1);
-            }
-
+        if ($request->hasFile('path_1')) {
             $filePath1 = $request->file('path_1')->store('menus', 'public');
-        }else{
-            $filePath1 = $menu->path_1;
-        }
-        
-        if (($request->hasFile('path_2')) && ($menu->path_2 != '')) {
-            if ($menu->path_2 && Storage::disk('public')->exists($menu->path_2)) {
-                Storage::disk('public')->delete($menu->path_2);
+            if($menu->path_1 == $filePath1){
+                $filePath1 = $menu->path_1;
+            }else{
+                if ($menu->path_1 && Storage::disk('public')->exists($menu->path_1)) {
+                    Storage::disk('public')->delete($menu->path_1);
+                }
             }
+        }
 
+        if ($request->hasFile('path_2')) {
             $filePath2 = $request->file('path_2')->store('menus', 'public');
-        }else{
-            $filePath2 = $menu->path_2;
-        }
-        
-        if (($request->hasFile('path_3')) && ($menu->path_3 != '')) {
-            if ($menu->path_3 && Storage::disk('public')->exists($menu->path_3)) {
-                Storage::disk('public')->delete($menu->path_3);
+            if($menu->path_2 == $filePath2){
+                $filePath2 = $menu->path_2;
+            }else{
+                if ($menu->path_2 && Storage::disk('public')->exists($menu->path_2)) {
+                    Storage::disk('public')->delete($menu->path_2);
+                }
             }
+        }
 
+        if ($request->hasFile('path_3')) {
             $filePath3 = $request->file('path_3')->store('menus', 'public');
-        }else{
-            $filePath3 = $menu->path_3;
-        }
-        
-        if (($request->hasFile('path_4')) && ($menu->path_4 != '')) {
-            if ($menu->path_4 && Storage::disk('public')->exists($menu->path_4)) {
-                Storage::disk('public')->delete($menu->path_4);
+            if($menu->path_3 == $filePath3){
+                $filePath3 = $menu->path_3;
+            }else{
+                if ($menu->path_3 && Storage::disk('public')->exists($menu->path_3)) {
+                    Storage::disk('public')->delete($menu->path_3);
+                }
             }
-
-            $filePath4 = $request->file('path_4')->store('menus', 'public');
-        }else{
-            $filePath4 = $menu->path_4;
         }
-        
+
+        if ($request->hasFile('path_4')) {
+            $filePath4 = $request->file('path_4')->store('menus', 'public');
+            if($menu->path_4 == $filePath4){
+                $filePath4 = $menu->path_4;
+            }else{
+                if ($menu->path_4 && Storage::disk('public')->exists($menu->path_4)) {
+                    Storage::disk('public')->delete($menu->path_4);
+                }
+            }
+        }
+
 
         $menu->update([
             'category_id' => 1,
