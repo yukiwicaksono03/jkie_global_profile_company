@@ -133,12 +133,21 @@ class MenuController extends Controller
     {
         $menu = Menu::findOrFail($id);
 
-        if ($menu->path && Storage::disk('public')->exists($menu->path)) {
-            Storage::disk('public')->delete($menu->path);
+        if ($menu->path_1 && Storage::disk('public')->exists($menu->path_1)) {
+            Storage::disk('public')->delete($menu->path_1);
+        }
+        if ($menu->path_2 && Storage::disk('public')->exists($menu->path_2)) {
+            Storage::disk('public')->delete($menu->path_2);
+        }
+        if ($menu->path_3 && Storage::disk('public')->exists($menu->path_3)) {
+            Storage::disk('public')->delete($menu->path_3);
+        }
+        if ($menu->path_4 && Storage::disk('public')->exists($menu->path_4)) {
+            Storage::disk('public')->delete($menu->path_4);
         }
 
         $menu->delete();
 
-        return redirect()->route('admin.menu', ['flag' => $request->flag])->with('success', 'Menu berhasil dihapus!');
+        return redirect()->route('admin.menu', ['flag' => $flag])->with('success', 'Menu berhasil dihapus!');
     }
 }

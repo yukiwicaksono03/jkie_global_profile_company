@@ -12,7 +12,10 @@ class Menu extends Model
         'category_id',
         'name',
         'desc',
-        'path',
+        'path_1',
+        'path_2',
+        'path_3',
+        'path_4',
         "price",
         "is_best",
         "flag"
