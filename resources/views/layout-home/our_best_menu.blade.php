@@ -11,7 +11,7 @@
                 <div class="card" style="cursor:pointer"
                     onclick="window.location.href='{{ route('menu_detail',$item->id) }}'" >
                     <div class="ratio ratio-4x3">
-                        <img src="{{ asset('storage/app/public/'.$item->path) }}"
+                        <img src="{{ asset('storage/app/public/'.$item->path_1) }}"
                             class="rounded"
                             style="width:100%; height:100%; object-fit:cover;"
                             alt="foto menu" >
