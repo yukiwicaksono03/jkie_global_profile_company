@@ -91,7 +91,7 @@ if($flag == 1){
                     @enderror
                     @if (isset($menu) && $menu->path)
                         <div class="mt-5" id="preview-wrapper">
-                            <img src="{{ asset('storage/'.$menu->path) }}" alt="Preview" class="img-thumbnail">
+                            <img src="{{ asset('storage/app/public/'.$menu->path) }}" alt="Preview" class="img-thumbnail">
                         </div>
                     @endif
                 </div>

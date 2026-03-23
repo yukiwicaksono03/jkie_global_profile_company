@@ -55,16 +55,16 @@ The photos and documentation presented here capture moments from our daily opera
         <br>
 
         <div class="col-lg-6 mb-3">
-            <img src="{{ asset('storage/app/public/menus/'.$master->foto_sejarah_1) }}" class="w-100">
+            <img src="{{ asset('storage/app/public/'.$master->foto_sejarah_1) }}" class="w-100">
         </div>
         <div class="col-lg-6 mb-3">
-            <img src="{{ asset('storage/app/public/menus/'.$master->foto_sejarah_2) }}" class="w-100">
+            <img src="{{ asset('storage/app/public/'.$master->foto_sejarah_2) }}" class="w-100">
         </div>
         <div class="col-lg-6 mb-3">
-            <img src="{{ asset('storage/app/public/menus/'.$master->foto_sejarah_3) }}" class="w-100">
+            <img src="{{ asset('storage/app/public/'.$master->foto_sejarah_3) }}" class="w-100">
         </div>
         <div class="col-lg-6 mb-3">
-            <img src="{{ asset('storage/app/public/menus/'.$master->foto_sejarah_4) }}" class="w-100">
+            <img src="{{ asset('storage/app/public/'.$master->foto_sejarah_4) }}" class="w-100">
         </div>
    </div>
 </div>
