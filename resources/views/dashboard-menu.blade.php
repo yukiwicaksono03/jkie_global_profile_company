@@ -7,6 +7,8 @@ if($flag == 1){
     $title = 'SERVICE & PRODUCTS';
 }elseif($flag == 2){
     $title = 'INSIGHTS';
+}elseif($flag == 3){
+    $title = 'CLIENTS';
 }
 @endphp
 <div class="card">

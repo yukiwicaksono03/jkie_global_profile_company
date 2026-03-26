@@ -7,6 +7,8 @@ if($flag == 1){
     $title = 'SERVICE & PRODUCTS';
 }elseif($flag == 2){
     $title = 'INSIGHTS';
+}elseif($flag == 3){
+    $title = 'CLIENTS';
 }
 @endphp
 <div class="card">
@@ -92,7 +94,7 @@ if($flag == 1){
                         </div>
                     @endif
                 </div>
-                <div class="col-12 col-md-2">
+                <div class="col-12 col-md-2" style="{{ ($flag == 3) ? 'display:none;' : '' }}">
                     <input type="file" name="path_2" class="form-control">
                     @if (isset($menu) && $menu->path_2)
                         <div class="mt-5" id="preview-wrapper">
@@ -100,7 +102,7 @@ if($flag == 1){
                         </div>
                     @endif
                 </div>
-                <div class="col-12 col-md-2">
+                <div class="col-12 col-md-2" style="{{ ($flag == 3) ? 'display:none;' : '' }}">
                     <input type="file" name="path_3" class="form-control">
                     @if (isset($menu) && $menu->path_3)
                         <div class="mt-5" id="preview-wrapper">
@@ -108,7 +110,7 @@ if($flag == 1){
                         </div>
                     @endif
                 </div>
-                <div class="col-12 col-md-2">
+                <div class="col-12 col-md-2" style="{{ ($flag == 3) ? 'display:none;' : '' }}">
                     <input type="file" name="path_4" class="form-control">
                     @if (isset($menu) && $menu->path_4)
                         <div class="mt-5" id="preview-wrapper">

@@ -41,7 +41,11 @@ class HomeController extends Controller
             $menuQuery->where('category_id', $request->category);
         }
         $menu = $menuQuery->get();
-        return view('menu', ["master" => $master, "categories" => $category, "menu" => $menu, "slider" => $slider]);
+        if($flag == '3'){
+            return view('clients', ["master" => $master, "categories" => $category, "menu" => $menu, "slider" => $slider]);
+        }else{
+            return view('menu', ["master" => $master, "categories" => $category, "menu" => $menu, "slider" => $slider]);
+        }
     }
 
     public function menu_detail($id)

@@ -121,7 +121,7 @@
         <!-- RIGHT MENU -->
         <ul class="navbar-nav fs-5">
             <li class="nav-item">
-                <a class="nav-link {{ Request::is('/clients') ? 'active' : '' }}" href="/clients">CLIENTS</a>
+                <a class="nav-link {{ Request::is('/clients') ? 'active' : '' }}" href="/menu/3">CLIENTS</a>
             </li>
 
             <li class="nav-item">
