@@ -172,9 +172,8 @@
                     </p>
 
                     <div class="d-flex gap-2">
-                        <a href="/menu" class="btn btn-yellow">Contact Us</a>
-
-                        <a href="/menu" class="btn btn-yellow">Join the Team</a>
+                        <a href="/contact" class="btn btn-blue">Contact Us</a>
+                        <a href="/careers" class="btn btn-blue">Join the Team</a>
                     </div>
                 </div>
             </div>

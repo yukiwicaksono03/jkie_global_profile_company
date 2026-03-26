@@ -1,3 +1,4 @@
+<section class="py-5 bg-light-new">
 <div class="container" style="margin-top: 200px; margin-bottom: 200px">
    <div class="row d-flex justify-content-center">
         <div class="col-lg-11 d-flex flex-column justify-content-start">
@@ -68,3 +69,4 @@ The photos and documentation presented here capture moments from our daily opera
         </div>
    </div>
 </div>
+</section>

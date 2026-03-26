@@ -1,3 +1,4 @@
+<section class="py-5 bg-light-new">
 <div class="container" style="margin-top: 20px;">
     <!-- <p class="fw-bold text-center fs-2 mb-3">
         Our Core Services
@@ -58,7 +59,7 @@
         </div>
     </div>
 </div>
-
+</section>
 @push('script')
     <script>
         function openPreview(image, name, desc, price) {

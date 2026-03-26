@@ -26,7 +26,7 @@
 </head>
 <body>
 
-<section class="py-5">
+<section class="py-5 bg-light-new">
 <div class="container">
 
 <div class="text-center mb-5">
@@ -45,9 +45,7 @@
 <div class="contact-item">
 <strong>Address</strong>
 <p class="mb-0">
-Jl. Example Street No.123 <br>
-Jakarta, DKI Jakarta <br>
-Indonesia
+{{ $master->alamat }}
 </p>
 </div>
 
@@ -118,14 +116,12 @@ Send Message
 
 
 <!-- Google Maps -->
-<section class="pb-5">
+<section class="pb-5 bg-light-new">
 <div class="container">
 
 <div class="map-container">
 
-<iframe 
-src="https://maps.google.com/maps?q=jakarta&t=&z=13&ie=UTF8&iwloc=&output=embed">
-</iframe>
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3965.7920955421423!2d106.7816851!3d-6.2910338!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f1dac79851df%3A0x3e1666b3f2a3e5a8!2sPlaza%20Aminta!5e0!3m2!1sid!2sid!4v1774526482371!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 </div>
 

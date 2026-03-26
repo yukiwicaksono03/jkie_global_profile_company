@@ -52,16 +52,16 @@
             color: white !important;
         }
 
-        .btn-yellow{
+        .btn-blue{
             background: transparent;
             color: #fff;
             border: 1px solid #fff !important;
         }
 
-        .btn-yellow:hover{
-            background:#f5c518;
+        .btn-blue:hover{
+            background:#080884;
             color:#fff;
-            border: 1px solid #f5c518 !important;
+            border: 1px solid #080884 !important;
         }
 
         body {
@@ -85,6 +85,16 @@
             left: 0;
             right: 0;
             z-index: 1000;
+        }
+
+        .bg-light-new {
+          background-color: #c8e4ef !important;
+        }
+
+        a.bg-light-new:focus, a.bg-light-new:hover,
+        button.bg-light-new:focus,
+        button.bg-light-new:hover {
+          background-color: #dae0e5 !important;
         }
     </style>
     @stack('style')

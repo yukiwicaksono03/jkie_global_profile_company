@@ -1,4 +1,4 @@
-<nav class="footer px-5 py-3" style="background:#212529; color: white">
+<nav class="footer px-5 py-3" style="background:#080884; color: white">
     <div class="container py-5">
         <div class="row">
             <div class="col-lg-6">
@@ -9,7 +9,7 @@
                     {{ $master->desc }}
                 </p>
                 <p class="fs-6">
-                    PLAZA AMINTA OFFICE, 2ND FLOOR SUIT 208, JL. TB SIMATUPANG KAV. 10, JAKARTA 12310, Jakarta Selatan 12310, DKI Jakarta , Indonesia
+                    {{ $master->alamat }}
                 </p>
                 <p class="fs-6 mt-3">
                     2026 &copy; JK Inspection Engineering Co., Ltd

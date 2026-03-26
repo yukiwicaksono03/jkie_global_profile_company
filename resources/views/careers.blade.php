@@ -1,6 +1,6 @@
 @extends('layouts.main')
 @section('main')
-<section class="py-5">
+<section class="py-5 bg-light-new">
 <div class="container">
 
 <div class="text-center mb-5">
