@@ -25,8 +25,6 @@
 .client-card:hover img{
     filter:grayscale(0%);
 }
-
-
 </style>
 
 </head>
@@ -47,8 +45,7 @@ Trusted by companies from various industries
 @foreach ($menu as $item)
 <div class="col-6 col-md-3">
 <div class="client-card text-center">
-<img src="images/clients/client1.png" class="img-fluid" alt="Client 1">
-<p class="mt-3 mb-0 small fw-semibold">PT Nusantara Energi</p>
+<img src="{{ asset('storage/app/public/'.$item->path_1) }}" class="img-fluid" alt="{{$item->name}}">
 </div>
 </div>
 @endforeach
