@@ -18,7 +18,7 @@ class HomeController extends Controller
         $master = Master::latest()->first();
         $kedai = $master->groupedKedai();
         $wahana = $master->groupedWahana();
-        $menu = Menu::latest()->where('flag','=',$flag)->get();
+        $menu = Menu::latest()->where('flag','=','1')->get();
         $event = Event::latest()->limit(3)->get();
         $slider = Slider::latest()->get();
         $gallery = Gallery::latest()->get();
