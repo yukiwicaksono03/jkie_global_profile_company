@@ -147,11 +147,11 @@
             @foreach ($slider as $item)
             <video autoplay muted loop playsinline class="hero-video">
                 @if (request()->routeIs('home') && $item->id == 1)
-                <source src="{{ asset('storage/'.$item->path) }}" type="video/mp4">                
+                <source src="{{ asset('storage/app/public/'.$item->path) }}" type="video/mp4">                
                 @elseif (request()->routeIs('about') && $item->id == 2)
-                <source src="{{ asset('storage/'.$item->path) }}" type="video/mp4">
+                <source src="{{ asset('storage/app/public/'.$item->path) }}" type="video/mp4">
                 @elseif (request()->routeIs('menu'))
-                <source src="{{ asset('storage/'.$item->path) }}" type="video/mp4">
+                <source src="{{ asset('storage/app/public/'.$item->path) }}" type="video/mp4">
                 @endif
             </video>
             @endforeach

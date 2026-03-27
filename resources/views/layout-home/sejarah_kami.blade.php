@@ -16,7 +16,7 @@ Choosing JKIE means choosing a partner who values trust, efficiency, and sustain
             </p>
             <p class="fs-2 fw-bold">About Us</p>
             <p class="fs-6" style="font-size: 150% !important;">
-JKIE is a professional company dedicated to delivering high-quality services and solutions for businesses and organizations. Our team is composed of skilled professionals who bring extensive experience, technical expertise, and a strong commitment to excellence.
+100+ Qualified Inspectors / Expeditors In Overseas & 500+ Qualified Inspectors / Expeditors Indonesia. We dedicated to delivering high-quality services and solutions for businesses and organizations. Our team is composed of skilled professionals who bring extensive experience, technical expertise, and a strong commitment to excellence.
 
 Since our establishment, we have continuously focused on improving our capabilities, adopting modern technologies, and maintaining the highest standards in every aspect of our operations.
 
@@ -69,4 +69,4 @@ The photos and documentation presented here capture moments from our daily opera
         </div>
    </div>
 </div>
-</section>
+</section>  
