@@ -10,6 +10,11 @@
                 </p>
                 <p class="fs-6">
                     {{ $master->alamat }}
+                    <br>
+                <div onclick="window.location.href='https://wa.me/62{{ $master->whatsapp }}'" style="cursor: pointer;">
+                    <img src="{{ asset('images/logo_wa.png') }}" height="19">
+                    <span>{{ $master->whatsapp }}</span>
+                </div>
                 </p>
                 <p class="fs-6 mt-3">
                     2026 &copy; JK Inspection Engineering Co., Ltd
