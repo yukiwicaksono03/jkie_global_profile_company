@@ -12,7 +12,7 @@
                     {{ $master->alamat }}
                     <br>
                 <div onclick="window.location.href='https://wa.me/62{{ $master->whatsapp }}'" style="cursor: pointer;">
-                    <img src="{{ asset('images/logo_wa.png') }}" height="19">
+                    <img src="{{ asset('public/images/logo_wa.png') }}" height="19">
                     <span>{{ $master->whatsapp }}</span>
                 </div>
                 </p>
