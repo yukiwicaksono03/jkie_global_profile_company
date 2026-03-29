@@ -20,7 +20,7 @@ class HomeController extends Controller
         $wahana = $master->groupedWahana();
         $menu = Menu::latest()->where('flag','=','1')->get();
         $event = Event::latest()->limit(3)->get();
-        $slider = Slider::latest()->get();
+        $slider = Slider::find(1);
         $gallery = Gallery::latest()->get();
         return view('index', ["master" => $master, "menu" => $menu, "event" => $event, "slider" => $slider, "gallery" => $gallery, "kedai" => $kedai, "wahana" => $wahana]);
     }
@@ -28,14 +28,14 @@ class HomeController extends Controller
         $master = Master::latest()->first();
         $facilities = Facility::latest()->get();
         $wisata = Entertainment::latest()->get();
-        $slider = Slider::latest()->get();
+        $slider = Slider::find(1);
         return view('about', ["master" => $master, "facilities" => $facilities, "wisata" => $wisata, "slider" => $slider]);
     }
     public function menu(Request $request, $flag){
         $master = Master::latest()->first();
         $category = Categories::latest()->get();
         $menuQuery = Menu::with('category')->where('flag','=',$flag)->latest();
-        $slider = Slider::latest()->get();
+        $slider = Slider::find(2);
 
         if ($request->has('category') && $request->category != '') {
             $menuQuery->where('category_id', $request->category);

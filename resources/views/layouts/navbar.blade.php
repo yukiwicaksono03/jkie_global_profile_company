@@ -75,6 +75,13 @@
     object-fit:cover;
     z-index:1;
 }
+
+#muteBtn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 20;
+}
 </style>
 <nav class="navbar navbar-expand-lg navbar-light px-5 py-3 navbar-glass">
 
@@ -144,17 +151,10 @@
         data-bs-ride="carousel"
         data-bs-interval="{{ $master->slider_delay }}">
         <div class="carousel-inner">
-            @foreach ($slider as $item)
-            <video autoplay muted loop playsinline class="hero-video">
-                @if (request()->routeIs('home') && $item->id == 1)
-                <source src="{{ asset('storage/app/public/'.$item->path) }}" type="video/mp4">                
-                @elseif (request()->routeIs('about') && $item->id == 2)
-                <source src="{{ asset('storage/app/public/'.$item->path) }}" type="video/mp4">
-                @elseif (request()->routeIs('menu'))
-                <source src="{{ asset('storage/app/public/'.$item->path) }}" type="video/mp4">
-                @endif
+
+            <video autoplay loop playsinline class="hero-video" id="myVideo">
+                <source src="{{ asset('storage/app/public/'.$slider->path) }}" type="video/mp4">
             </video>
-            @endforeach
         </div>
     </div>
     <div class="hero-content">
@@ -178,6 +178,19 @@
                 </div>
             </div>
         </div>
+        <button class="btn btn-blue" id="muteBtn">Mute 🔇</button>
+
     </div>
 
 </div>
+<script>
+    const video = document.getElementById('myVideo');
+    const button = document.getElementById('muteBtn');
+
+    button.addEventListener('click', () => {
+        video.muted = !video.muted;
+
+        // Change button text
+        button.textContent = video.muted ? 'Unmute 🔊' : 'Mute 🔇';
+    });
+</script>
