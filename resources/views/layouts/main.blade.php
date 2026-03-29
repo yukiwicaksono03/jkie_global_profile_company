@@ -68,6 +68,7 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh; 
+            font-family: "Century Gothic", CenturyGothic, sans-serif !important;
         }
         main {
             flex: 1; 
