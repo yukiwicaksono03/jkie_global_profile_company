@@ -47,4 +47,6 @@ return [
     'your_email' => 'Your Email',
     'subject' => 'Subject',
     'write_your' => 'Write your message',
+    'read_more' => 'Read More',
+    'apply_now' => 'Apply Now',
 ];

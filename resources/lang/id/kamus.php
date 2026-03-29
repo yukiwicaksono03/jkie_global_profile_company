@@ -47,4 +47,6 @@ return [
     'your_email' => 'Email Anda',
     'subject' => 'Subjek',
     'write_your' => 'Tulis pesan Anda',
+    'read_more' => 'Baca Selengkapnya',
+    'apply_now' => 'Lamar Sekarang',
 ];

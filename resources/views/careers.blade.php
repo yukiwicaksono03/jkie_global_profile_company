@@ -24,7 +24,7 @@
 <li>Assist commercial operations</li>
 </ul>
 
-<button class="btn btn-primary btn-sm">Apply Now</button>
+<button class="btn btn-primary btn-sm">{{ __('kamus.apply_now') }}</button>
 </div>
 </div>
 </div>
@@ -43,7 +43,7 @@
 <li>Maintain client and vendor records</li>
 </ul>
 
-<button class="btn btn-primary btn-sm">Apply Now</button>
+<button class="btn btn-primary btn-sm">{{ __('kamus.apply_now') }}</button>
 </div>
 </div>
 </div>
@@ -62,7 +62,7 @@
 <li>Drive digital transformation initiatives</li>
 </ul>
 
-<button class="btn btn-primary btn-sm">Apply Now</button>
+<button class="btn btn-primary btn-sm">{{ __('kamus.apply_now') }}</button>
 </div>
 </div>
 </div>
@@ -81,7 +81,7 @@
 <li>Coordinate with finance teams globally</li>
 </ul>
 
-<button class="btn btn-primary btn-sm">Apply Now</button>
+<button class="btn btn-primary btn-sm">{{ __('kamus.apply_now') }}</button>
 </div>
 </div>
 </div>
@@ -100,7 +100,7 @@
 <li>Maintain official records and reports</li>
 </ul>
 
-<button class="btn btn-primary btn-sm">Apply Now</button>
+<button class="btn btn-primary btn-sm">{{ __('kamus.apply_now') }}</button>
 </div>
 </div>
 </div>
@@ -119,7 +119,7 @@
 <li>Work with engineering and project teams</li>
 </ul>
 
-<button class="btn btn-primary btn-sm">Apply Now</button>
+<button class="btn btn-primary btn-sm">{{ __('kamus.apply_now') }}</button>
 </div>
 </div>
 </div>

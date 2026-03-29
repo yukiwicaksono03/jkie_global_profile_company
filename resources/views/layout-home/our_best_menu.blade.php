@@ -20,7 +20,7 @@
                     <div class="p-3 mt-1">
                         <p class="fs-5 text-center ">{{ $item->name }}</p>
                         <p class="fs-6 text-center fw-bold">
-                            Read More
+                            {{ __('kamus.read_more') }}
                         </p>
                     </div>
                 </div>

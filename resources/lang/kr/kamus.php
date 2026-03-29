@@ -46,4 +46,6 @@ return [
     'your_name' => '이름을 입력하세요',
     'your_email' => '이메일을 입력하세요',
     'write_your' => '메시지를 입력하세요',
+    'read_more' => '자세히 보기',
+    'apply_now' => '지원하기',
 ];
