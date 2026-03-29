@@ -34,9 +34,9 @@
 <div class="container">
 
 <div class="text-center mb-5">
-<h2 class="fw-bold">Our Clients</h2>
+<h2 class="fw-bold">{{ __('kamus.our_clients') }}</h2>
 <p class="text-muted">
-Trusted by companies from various industries
+{{ __('kamus.trusted_by') }}
 </p>
 </div>
 

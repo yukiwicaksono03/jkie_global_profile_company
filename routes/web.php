@@ -85,3 +85,8 @@ Route::middleware(['auth'])->group(function () {
 Route::fallback(function () {
     return redirect()->route('home');
 });
+
+Route::get('/lang/{locale}', function ($locale) {
+    session(['locale' => $locale]);
+    return back();
+});

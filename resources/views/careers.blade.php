@@ -4,11 +4,8 @@
 <div class="container">
 
 <div class="text-center mb-5">
-<h2 class="fw-bold">Join Our Team</h2>
-<p class="text-muted">
-We are always looking for talented professionals to join our growing global team.
-Explore our current opportunities below.
-</p>
+<h2 class="fw-bold">{{ __('kamus.join_our') }}</h2>
+<p class="text-muted">{{ __('kamus.we_are') }}</p>
 </div>
 
 <div class="row g-4">

@@ -104,15 +104,15 @@
         <!-- LEFT MENU -->
         <ul class="navbar-nav fs-5">
             <li class="nav-item">
-                <a class="nav-link {{ Request::is('about') ? 'active' : '' }}" href="/about">WHO ARE WE</a>
+                <a class="nav-link {{ Request::is('about') ? 'active' : '' }}" href="/about">{{ __('kamus.WHO_ARE_WE') }}</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link {{ Request::is('menu/1') ? 'active' : '' }}" href="/menu/1">SERVICE & PRODUCTS</a>
+                <a class="nav-link {{ Request::is('menu/1') ? 'active' : '' }}" href="/menu/1">{{ __('kamus.SERVICE_PRODUCTS') }}</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link {{ Request::is('menu/2') ? 'active' : '' }}" href="/menu/2">INSIGHTS</a>
+                <a class="nav-link {{ Request::is('menu/2') ? 'active' : '' }}" href="/menu/2">{{ __('kamus.INSIGHTS') }}</a>
             </li>
         </ul>
 
@@ -120,7 +120,7 @@
         <!-- DESKTOP CENTER LOGO -->
         <a class="navbar-brand d-none d-lg-block text-center"
            href="/"
-           style="margin-left: -10%; margin-top:-20px;margin-bottom:-20px;">
+           style="margin-left: 0px; margin-top:-20px;margin-bottom:-20px;">
             <img src="{{ asset('public/images/jkie_logo.jpeg') }}" height="80">
         </a>
 
@@ -128,24 +128,29 @@
         <!-- RIGHT MENU -->
         <ul class="navbar-nav fs-5">
             <li class="nav-item">
-                <a class="nav-link {{ Request::is('/clients') ? 'active' : '' }}" href="/menu/3">CLIENTS</a>
+                <a class="nav-link {{ Request::is('/clients') ? 'active' : '' }}" href="/menu/3">{{ __('kamus.CLIENTS') }}</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link {{ Request::is('careers') ? 'active' : '' }}" href="/careers">CAREERS</a>
+                <a class="nav-link {{ Request::is('careers') ? 'active' : '' }}" href="/careers">{{ __('kamus.CAREERS') }}</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link {{ Request::is('contact') ? 'active' : '' }}" href="/contact">CONTACT</a>
+                <a class="nav-link {{ Request::is('contact') ? 'active' : '' }}" href="/contact">{{ __('kamus.CONTACT') }}</a>
+            </li>
+            <li>
+                <div style="margin-top: 6px; margin-left: 20px;">
+                    <a href="/lang/en"><img src="{{ asset('images/en.png') }}" width="20"></a>&nbsp;
+                    <a href="/lang/id"><img src="{{ asset('images/id.png') }}" width="20"></a>&nbsp;
+                    <a href="/lang/kr"><img src="{{ asset('images/kr.png') }}" width="20"></a>
+                </div>
             </li>
         </ul>
-
     </div>
 
 </div>
 </nav>
 <div class="hero-wrapper">
-
     <div id="bgSlider"
         class="carousel slide"
         data-bs-ride="carousel"
@@ -162,23 +167,23 @@
             <div class="row align-items-center">
                 <div class="col-lg-7 d-flex flex-column mx-auto align-items-center justify-content-center text-center">
                     <p class="fs-4 fw-bold mb-2 text-light">
-                        {{ $master->greating_home_1 }}
+                        {{ __('kamus.welcome') }}
                     </p>
                     <p class="fs-1 fw-bold text-light" style="color:#184D2B">
                         {{ $master->greating_home_2 }}
                     </p>
                     <p class="fs-6 text-light">
-                        {{ $master->greating_home_3 }}
+                        {{ __('kamus.description') }}
                     </p>
 
                     <div class="d-flex gap-2">
-                        <a href="/contact" class="btn btn-blue">Contact Us</a>
-                        <a href="/careers" class="btn btn-blue">Join the Team</a>
+                        <a href="/contact" class="btn btn-blue">{{ __('kamus.contact_us') }}</a>
+                        <a href="/careers" class="btn btn-blue">{{ __('kamus.join_team') }}</a>
                     </div>
                 </div>
             </div>
         </div>
-        <button class="btn btn-blue" id="muteBtn">Mute 🔇</button>
+        <button class="btn btn-blue" id="muteBtn">{{ __('kamus.mute') }} 🔇</button>
 
     </div>
 
@@ -191,6 +196,6 @@
         video.muted = !video.muted;
 
         // Change button text
-        button.textContent = video.muted ? 'Unmute 🔊' : 'Mute 🔇';
+        button.textContent = video.muted ? '{{ __("kamus.unmute") }} 🔊' : '{{ __("kamus.mute") }} 🔇';
     });
 </script>

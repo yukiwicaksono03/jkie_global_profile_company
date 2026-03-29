@@ -29,9 +29,10 @@
 <section class="py-5 bg-light-new">
 <div class="container">
 
+
 <div class="text-center mb-5">
-<h2 class="fw-bold">Contact Us</h2>
-<p class="text-muted">Get in touch with our team for inquiries and collaborations</p>
+<h2 class="fw-bold">{{ __('kamus.contact_us') }}</h2>
+<p class="text-muted">{{ __('kamus.get_in') }}</p>
 </div>
 
 <div class="row g-4">
@@ -40,32 +41,32 @@
 <div class="col-lg-4">
 <div class="contact-info">
 
-<h5 class="mb-4">Company Information</h5>
+<h5 class="mb-4">{{ __('kamus.company_information') }}</h5>
 
 <div class="contact-item">
-<strong>Address</strong>
+<strong>{{ __('kamus.address') }}</strong>
 <p class="mb-0">
 {{ $master->alamat }}
 </p>
 </div>
 
 <div class="contact-item">
-<strong>Phone</strong>
+<strong>{{ __('kamus.phone') }}</strong>
 <p class="mb-0">+62 812 3456 7890</p>
 </div>
 
 <div class="contact-item">
-<strong>Email</strong>
+<strong>{{ __('kamus.email') }}</strong>
 <p class="mb-0">info@jkieglobal.com</p>
 </div>
 
-<div class="contact-item">
+<!-- <div class="contact-item">
 <strong>Working Hours</strong>
 <p class="mb-0">
 Monday – Friday <br>
 08:00 AM – 05:00 PM
 </p>
-</div>
+</div> -->
 
 </div>
 </div>
@@ -78,28 +79,28 @@ Monday – Friday <br>
 <div class="row g-3">
 
 <div class="col-md-6">
-<label class="form-label">Full Name</label>
-<input type="text" class="form-control" placeholder="Your Name">
+<label class="form-label">{{ __('kamus.full_name') }}</label>
+<input type="text" class="form-control" placeholder="{{ __('kamus.your_name') }}">
 </div>
 
 <div class="col-md-6">
-<label class="form-label">Email Address</label>
-<input type="email" class="form-control" placeholder="Your Email">
+<label class="form-label">{{ __('kamus.email_address') }}</label>
+<input type="email" class="form-control" placeholder="{{ __('kamus.your_email') }}">
 </div>
 
 <div class="col-12">
-<label class="form-label">Subject</label>
-<input type="text" class="form-control" placeholder="Subject">
+<label class="form-label">{{ __('kamus.subject') }}</label>
+<input type="text" class="form-control" placeholder="{{ __('kamus.subject') }}">
 </div>
 
 <div class="col-12">
-<label class="form-label">Message</label>
-<textarea class="form-control" rows="5" placeholder="Write your message"></textarea>
+<label class="form-label">{{ __('kamus.message') }}</label>
+<textarea class="form-control" rows="5" placeholder="{{ __('kamus.write_your') }}"></textarea>
 </div>
 
 <div class="col-12">
 <button type="submit" class="btn btn-primary px-4">
-Send Message
+{{ __('kamus.send_message') }}
 </button>
 </div>
 

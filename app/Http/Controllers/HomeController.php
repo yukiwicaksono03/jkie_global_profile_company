@@ -86,7 +86,7 @@ class HomeController extends Controller
         $master = Master::latest()->first();
         $facilities = Facility::latest()->get();
         $wisata = Entertainment::latest()->get();
-        $slider = Slider::latest()->get();
+        $slider = Slider::find(2);
         return view('clients', ["master" => $master, "facilities" => $facilities, "wisata" => $wisata, "slider" => $slider]);
     }
 
@@ -94,7 +94,7 @@ class HomeController extends Controller
         $master = Master::latest()->first();
         $facilities = Facility::latest()->get();
         $wisata = Entertainment::latest()->get();
-        $slider = Slider::latest()->get();
+        $slider = Slider::find(2);
         return view('contact', ["master" => $master, "facilities" => $facilities, "wisata" => $wisata, "slider" => $slider]);
     }
 
@@ -102,7 +102,7 @@ class HomeController extends Controller
         $master = Master::latest()->first();
         $facilities = Facility::latest()->get();
         $wisata = Entertainment::latest()->get();
-        $slider = Slider::latest()->get();
+        $slider = Slider::find(2);
         return view('careers', ["master" => $master, "facilities" => $facilities, "wisata" => $wisata, "slider" => $slider]);
     }
 }

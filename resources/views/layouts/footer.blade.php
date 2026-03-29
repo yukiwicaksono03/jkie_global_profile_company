@@ -9,7 +9,7 @@
                     {{ $master->desc }}
                 </p>
                 <p class="fs-6">
-                    {{ $master->alamat }}
+                    {{ __('kamus.address') }} : {{ $master->alamat }}
                     <br>
                 <div onclick="window.location.href='https://wa.me/62{{ $master->whatsapp }}'" style="cursor: pointer;">
                     <img src="{{ asset('public/images/logo_wa.png') }}" height="19">
