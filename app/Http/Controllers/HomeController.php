@@ -52,7 +52,7 @@ class HomeController extends Controller
     {
         $master = Master::latest()->first();
         $menu = Menu::findOrFail($id);
-        $slider = Slider::latest()->get();
+        $slider = Slider::find(2);
         // dd($menu);
         return view('menu_detail', [
             'master' => $master,
@@ -65,6 +65,7 @@ class HomeController extends Controller
     {
         $master = Master::latest()->first();
         $query = Event::query();
+        $slider = Slider::find(2);
 
         if ($request->filled('year')) {
             $query->whereYear('date', $request->year);
