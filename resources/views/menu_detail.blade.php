@@ -7,28 +7,28 @@
     <div class="row d-flex justify-content-center gap-3 align-items-stretch">
             
                     @if($menu->path_1 != '')
-                    <div class="ratio ratio-4x3" style="width:40%; height: 40%;">
+                    <div style="width:40%; height: 40%;">
                         <img src="{{ asset('storage/app/public/'.$menu->path_1) }}"
                             class="rounded"
                             style="width:100%; height:100%; object-fit:cover;">
                     </div>
                     @endif
                     @if($menu->path_2 != '')
-                    <div class="ratio ratio-4x3" style="width:40%; height: 40%;">
+                    <div style="width:40%; height: 40%;">
                         <img src="{{ asset('storage/app/public/'.$menu->path_2) }}"
                             class="rounded"
                             style="width:100%; height:100%; object-fit:cover;">
                     </div>
                     @endif
                     @if($menu->path_3 != '')
-                    <div class="ratio ratio-4x3" style="width:40%; height: 40%;">
+                    <div style="width:40%; height: 40%;">
                         <img src="{{ asset('storage/app/public/'.$menu->path_3) }}"
                             class="rounded"
                             style="width:100%; height:100%; object-fit:cover;">
                     </div>
                     @endif
                     @if($menu->path_4 != '')
-                    <div class="ratio ratio-4x3" style="width:40%; height: 40%;">
+                    <div style="width:40%; height: 40%;">
                         <img src="{{ asset('storage/app/public/'.$menu->path_4) }}"
                             class="rounded"
                             style="width:100%; height:100%; object-fit:cover;">
