@@ -37,6 +37,15 @@ class HomeController extends Controller
         $category = Categories::latest()->get();
         $menuQuery = Menu::with('category')->where('flag','=',$flag)->latest();
         $slider = Slider::find(2);
+        $language = session('locale','en');
+
+        if($flag == 1){
+            $menutitle = $this->translateKeepHtml('Service & Product',$language);;
+            $menudesc = $this->translateKeepHtml('We deliver comprehensive inspection engineering services and solutions to ensure quality, compliance, and reliability across all project phases.',$language);;
+        }elseif($flag == 2){
+            $menutitle = $this->translateKeepHtml('Insights',$language);;
+            $menudesc = $this->translateKeepHtml('We provide data-driven insights and technical analysis to support informed decision-making and continuous improvement in inspection and engineering processes.',$language);;
+        }
 
         if ($request->has('category') && $request->category != '') {
             $menuQuery->where('category_id', $request->category);
@@ -45,7 +54,7 @@ class HomeController extends Controller
         if($flag == '3'){
             return view('clients', ["master" => $master, "categories" => $category, "menu" => $menu, "slider" => $slider]);
         }else{
-            return view('menu', ["master" => $master, "categories" => $category, "menu" => $menu, "slider" => $slider]);
+            return view('menu', ["master" => $master, "categories" => $category, "menu" => $menu, "slider" => $slider, 'menutitle' => $menutitle, 'menudesc'  => $menudesc]);
         }
     }
 
@@ -82,7 +91,7 @@ class HomeController extends Controller
 
         $language = session('locale','en');
         $desc = $this->translateKeepHtml($menu->desc,$language);
-        // dd($menu);
+
         return view('menu_detail', [
             'master' => $master,
             'menu' => $menu,

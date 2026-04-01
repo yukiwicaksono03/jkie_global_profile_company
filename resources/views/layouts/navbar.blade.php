@@ -163,7 +163,7 @@
         </div>
     </div>
     <div class="hero-content">
-        <div class="container">
+        <div class="container" style="display:none !important">
             <div class="row align-items-center">
                 <div class="col-lg-7 d-flex flex-column mx-auto align-items-center justify-content-center text-center">
                     <p class="fs-4 fw-bold mb-2 text-light">
