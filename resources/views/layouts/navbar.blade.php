@@ -157,7 +157,7 @@
         data-bs-interval="{{ $master->slider_delay }}">
         <div class="carousel-inner">
 
-            <video autoplay loop playsinline class="hero-video" id="myVideo">
+            <video autoplay muted loop playsinline class="hero-video" id="myVideo">
                 <source src="{{ asset('storage/app/public/'.$slider->path) }}" type="video/mp4">
             </video>
         </div>
@@ -183,7 +183,7 @@
                 </div>
             </div>
         </div>
-        <button class="btn btn-blue" id="muteBtn">{{ __('kamus.mute') }} 🔇</button>
+        <button style="display:none;" class="btn btn-blue" id="muteBtn">{{ __('kamus.mute') }} 🔇</button>
 
     </div>
 
@@ -191,7 +191,7 @@
 <script>
     const video = document.getElementById('myVideo');
     const button = document.getElementById('muteBtn');
-    video.muted;
+
     button.addEventListener('click', () => {
         video.muted = !video.muted;
 
