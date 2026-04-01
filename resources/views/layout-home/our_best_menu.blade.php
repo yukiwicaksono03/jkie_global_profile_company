@@ -1,12 +1,11 @@
 <section class="py-5 bg-light-new">
 <div class="container" style="margin-top: 20px;">
-    <!-- <p class="fw-bold text-center fs-2 mb-3">
-        Our Core Services
+    <br><br><br><br>
+    <p class="fw-bold text-center fs-2 mb-3">
+        PT JKIE , Welcome, Compliance Inspection, Integrity Assessment , Equipment Readiness Certification & Engineering Services
     </p>
-    <p class="text-center fs-6 mb-5">
-        {{ $master->desc_our_menu_home }}
-    </p> -->
-    <div class="row d-flex justify-content-center gap-3 align-items-stretch">
+    <br><br><br><br>
+    <div class="row d-flex justify-content-center gap-3 align-items-stretch" style="display: none !important;">
         @foreach ($menu as $item)
             <div class="p-2 col-lg-4 mb-4">
                 <div class="card" style="cursor:pointer"

@@ -191,7 +191,7 @@
 <script>
     const video = document.getElementById('myVideo');
     const button = document.getElementById('muteBtn');
-
+    video.muted;
     button.addEventListener('click', () => {
         video.muted = !video.muted;
 
