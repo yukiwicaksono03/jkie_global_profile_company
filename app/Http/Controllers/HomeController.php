@@ -11,6 +11,7 @@ use App\Models\Facility;
 use App\Models\Slider;
 use App\Models\Gallery;
 use App\Models\Entertainment;
+use Stichoza\GoogleTranslate\GoogleTranslate;
 
 class HomeController extends Controller
 {
@@ -48,16 +49,45 @@ class HomeController extends Controller
         }
     }
 
+    function translateKeepHtml($text, $target = 'id') {
+        // Step 1: Extract tags
+        preg_match_all('/<[^>]+>/', $text, $matches);
+
+        $placeholders = [];
+        $cleanText = $text;
+
+        foreach ($matches[0] as $i => $tag) {
+            $key = "__TAG{$i}__";
+            $placeholders[$key] = $tag;
+            $cleanText = str_replace($tag, $key, $cleanText);
+        }
+
+        // Step 2: Translate text without tags
+        $tr = new GoogleTranslate($target);
+        $translated = $tr->translate($cleanText);
+
+        // Step 3: Restore tags
+        foreach ($placeholders as $key => $tag) {
+            $translated = str_replace($key, $tag, $translated);
+        }
+
+        return $translated;
+    }
+
     public function menu_detail($id)
     {
         $master = Master::latest()->first();
         $menu = Menu::findOrFail($id);
         $slider = Slider::find(2);
+
+        $language = session('locale','en');
+        $desc = $this->translateKeepHtml($menu->desc,$language);
         // dd($menu);
         return view('menu_detail', [
             'master' => $master,
             'menu' => $menu,
             'slider' => $slider,
+            'desc'  => $desc,
         ]);
     }
 

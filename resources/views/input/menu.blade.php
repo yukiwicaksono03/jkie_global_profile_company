@@ -11,6 +11,25 @@ if($flag == 1){
     $title = 'CLIENTS';
 }
 @endphp
+
+<script src="https://cdn.tiny.cloud/1/lq3l90kc05n1awguo2ktyjez87p79ecvkaxv3gmbfdge6ms5/tinymce/8/tinymce.min.js" referrerpolicy="origin" crossorigin="anonymous"></script>
+<script type="text/javascript">
+tinymce.init({
+  selector: 'textarea#editor',
+  height: 500,
+  plugins: [
+    'advlist', 'autolink', 'lists', 'link', 'image', 'charmap', 'preview',
+    'anchor', 'searchreplace', 'visualblocks', 'code', 'fullscreen',
+    'insertdatetime', 'media', 'table', 'help', 'wordcount',
+    'mediaembed',
+  ],
+  toolbar: 'undo redo | blocks | ' +
+  'bold italic backcolor | alignleft aligncenter ' +
+  'alignright alignjustify | bullist numlist outdent indent | ' +
+  'removeformat | help',
+  content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:16px }'
+});
+</script>
 <div class="card">
     <div class="card-header">
         <strong>TAMBAH {{$title}}</strong>
@@ -49,7 +68,7 @@ if($flag == 1){
             <div class="row form-group">
                 <div class="col col-md-3"><label class=" form-control-label">Deskripsi</label></div>
                 <div class="col-12 col-md-9">
-                    <textarea name="desc" class="form-control" rows="4" placeholder="Masukkan teks di sini">{{ old('desc', isset($menu) ? $menu->desc : '') }}</textarea>
+                    <textarea id="editor" name="desc" class="form-control" rows="4" placeholder="Masukkan teks di sini">{{ old('desc', isset($menu) ? $menu->desc : '') }}</textarea>
                     @error('desc')
                         <small class="text-danger">{{ $message }}</small>
                     @enderror

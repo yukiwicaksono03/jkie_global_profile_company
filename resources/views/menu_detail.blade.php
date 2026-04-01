@@ -34,8 +34,9 @@
                             style="width:100%; height:100%; object-fit:cover;">
                     </div>
                     @endif
-            <div class="text-center" style="text-wrap:auto; width:70%;">
-                {!! $menu->desc !!}
+                    
+            <div>
+                {!! $desc !!}
             </div>
         
     </div>

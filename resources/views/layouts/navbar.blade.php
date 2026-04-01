@@ -142,7 +142,7 @@
                 <div style="margin-top: 6px; margin-left: 20px;">
                     <a href="/lang/en"><img src="{{ asset('public/images/en.png') }}" width="20"></a>&nbsp;
                     <a href="/lang/id"><img src="{{ asset('public/images/id.png') }}" width="20"></a>&nbsp;
-                    <a href="/lang/kr"><img src="{{ asset('public/images/kr.png') }}" width="20"></a>
+                    <a href="/lang/ko"><img src="{{ asset('public/images/ko.png') }}" width="20"></a>
                 </div>
             </li>
         </ul>
