@@ -132,7 +132,7 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link {{ Request::is('careers') ? 'active' : '' }}" href="/careers">{{ __('kamus.CAREERS') }}</a>
+                <a class="nav-link {{ Request::is('menu/4') ? 'active' : '' }}" href="/menu/4">{{ __('kamus.CAREERS') }}</a>
             </li>
 
             <li class="nav-item">

@@ -55,6 +55,8 @@ class HomeController extends Controller
         $menu = $menuQuery->get();
         if($flag == '3'){
             return view('clients', ["master" => $master, "categories" => $category, "menu" => $menu, "slider" => $slider]);
+        }elseif($flag == '4'){
+            return view('careers', ["master" => $master, "categories" => $category, "menu" => $menu, "slider" => $slider]);
         }else{
             return view('menu', ["master" => $master, "categories" => $category, "menu" => $menu, "slider" => $slider, 'menutitle' => $menutitle, 'menudesc'  => $menudesc, 'disp_desc' => $disp_desc]);
         }

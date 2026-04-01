@@ -10,119 +10,40 @@
 
 <div class="row g-4">
 
-<!-- Commercial Specialist -->
+@foreach ($menu as $item)
 <div class="col-md-6">
 <div class="card h-100 shadow-sm">
 <div class="card-body">
-<h5 class="card-title">Commercial Specialist</h5>
-<p class="text-muted small">Department: Commercial</p>
+<h5 class="card-title">{{ $item->name}}</h5>
 
-<ul class="small text-muted">
-<li>Support bid and tender preparation</li>
-<li>Manage contracts and RFQs</li>
-<li>Coordinate with internal and external stakeholders</li>
-<li>Assist commercial operations</li>
-</ul>
+{!! $item->desc !!}
 
-<button class="btn btn-primary btn-sm">{{ __('kamus.apply_now') }}</button>
-</div>
-</div>
-</div>
 
-<!-- Commercial Analyst -->
-<div class="col-md-6">
-<div class="card h-100 shadow-sm">
-<div class="card-body">
-<h5 class="card-title">Commercial Analyst</h5>
-<p class="text-muted small">Department: Commercial</p>
+<button onclick="sendEmail()" class="btn btn-primary btn-sm">{{ __('kamus.apply_now') }}</button>
 
-<ul class="small text-muted">
-<li>Support commercial strategy</li>
-<li>Assist tender and bidding process</li>
-<li>Review contracts and agreements</li>
-<li>Maintain client and vendor records</li>
-</ul>
+<script>
+function sendEmail() {
+    window.location.href = `mailto:information@jkiglobal.com
+    ?subject=Job Application Submission
+    &body=Dear Hiring Team,%0D%0A%0D%0A
+I hope this message finds you well.%0D%0A%0D%0A
+I am writing to express my interest in joining your organization and to submit my application for available opportunities at JKIGlobal.%0D%0A%0D%0A
+%0D%0A%0D%0A
+[Your skills and interest here]%0D%0A%0D%0A
+%0D%0A%0D%0A
+Please find my attached resume for your consideration.%0D%0A%0D%0A
+Thank you for your time and consideration.%0D%0A%0D%0A
+Sincerely,%0D%0A
+[Your Name]%0D%0A
+[Your Phone]%0D%0A
+[Your Email]`;
+}
+</script>
 
-<button class="btn btn-primary btn-sm">{{ __('kamus.apply_now') }}</button>
 </div>
 </div>
 </div>
-
-<!-- Head of IT -->
-<div class="col-md-6">
-<div class="card h-100 shadow-sm">
-<div class="card-body">
-<h5 class="card-title">Head of IT & Digital Enablement</h5>
-<p class="text-muted small">Department: IT</p>
-
-<ul class="small text-muted">
-<li>Lead IT infrastructure and governance</li>
-<li>Manage cybersecurity and cloud systems</li>
-<li>Oversee IT vendors and services</li>
-<li>Drive digital transformation initiatives</li>
-</ul>
-
-<button class="btn btn-primary btn-sm">{{ __('kamus.apply_now') }}</button>
-</div>
-</div>
-</div>
-
-<!-- Invoice Processing Specialist -->
-<div class="col-md-6">
-<div class="card h-100 shadow-sm">
-<div class="card-body">
-<h5 class="card-title">Invoice Processing Specialist</h5>
-<p class="text-muted small">Department: Finance</p>
-
-<ul class="small text-muted">
-<li>Manage invoice processing operations</li>
-<li>Ensure financial accuracy and compliance</li>
-<li>Support accounting administration</li>
-<li>Coordinate with finance teams globally</li>
-</ul>
-
-<button class="btn btn-primary btn-sm">{{ __('kamus.apply_now') }}</button>
-</div>
-</div>
-</div>
-
-<!-- Government Relations Officer -->
-<div class="col-md-6">
-<div class="card h-100 shadow-sm">
-<div class="card-body">
-<h5 class="card-title">Government Relations Officer</h5>
-<p class="text-muted small">Department: Administration</p>
-
-<ul class="small text-muted">
-<li>Coordinate with government authorities</li>
-<li>Handle visa and labor documentation</li>
-<li>Ensure regulatory compliance</li>
-<li>Maintain official records and reports</li>
-</ul>
-
-<button class="btn btn-primary btn-sm">{{ __('kamus.apply_now') }}</button>
-</div>
-</div>
-</div>
-
-<!-- Technical Inspector -->
-<div class="col-md-6">
-<div class="card h-100 shadow-sm">
-<div class="card-body">
-<h5 class="card-title">QC / Technical Inspector</h5>
-<p class="text-muted small">Department: Inspection</p>
-
-<ul class="small text-muted">
-<li>Perform vendor inspections</li>
-<li>Ensure equipment quality compliance</li>
-<li>Prepare inspection reports</li>
-<li>Work with engineering and project teams</li>
-</ul>
-
-<button class="btn btn-primary btn-sm">{{ __('kamus.apply_now') }}</button>
-</div>
-</div>
-</div>
+@endforeach
 
 </div>
 </div>

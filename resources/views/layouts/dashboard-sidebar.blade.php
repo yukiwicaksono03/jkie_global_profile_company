@@ -29,6 +29,10 @@
                         <a href="/admin/menu/3"><i class="menu-icon fa fa-list"></i>CLIENTS</a>
                     </li>
 
+                    <li class="{{ Request::is('admin/menu/4') ? 'active' : '' }}">
+                        <a href="/admin/menu/4"><i class="menu-icon fa fa-suitcase"></i>CAREERS</a>
+                    </li>
+
                     <!-- <li class="{{ Request::is('admin/category') ? 'active' : '' }}">
                         <a href="/admin/category"><i class="menu-icon fa fa-archive"></i>Kategori</a>
                     </li>
