@@ -27,6 +27,14 @@
                             class="rounded"
                             style="width:100%; height:100%; object-fit:cover;"
                             alt="{{ $item->name }}" >
+
+
+                    <div class="p-3 mt-1" style="display: {{$disp_desc}};">
+                        <p class="fs-5 text-center ">{{ $item->name }}</p>
+                        <p class="fs-6 text-center fw-bold">
+                            {{ __('kamus.read_more') }}
+                        </p>
+                    </div>
                 </div>
             </div>
         @endforeach
