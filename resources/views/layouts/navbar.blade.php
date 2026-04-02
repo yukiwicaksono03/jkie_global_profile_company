@@ -104,15 +104,15 @@
         <!-- LEFT MENU -->
         <ul class="navbar-nav fs-5">
             <li class="nav-item">
-                <a class="nav-link {{ Request::is('about') ? 'active' : '' }}" href="/about">{{ __('kamus.WHO_ARE_WE') }}</a>
+                <a class="nav-link {{ Request::is('about') ? 'active' : '' }}" href="/about">WHO ARE WE</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link {{ Request::is('menu/1') ? 'active' : '' }}" href="/menu/1">{{ __('kamus.SERVICE_PRODUCTS') }}</a>
+                <a class="nav-link {{ Request::is('menu/1') ? 'active' : '' }}" href="/menu/1">SERVICE & PRODUCTS</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link {{ Request::is('menu/2') ? 'active' : '' }}" href="/menu/2">{{ __('kamus.INSIGHTS') }}</a>
+                <a class="nav-link {{ Request::is('menu/2') ? 'active' : '' }}" href="/menu/2">INSIGHTS</a>
             </li>
         </ul>
 
@@ -128,15 +128,15 @@
         <!-- RIGHT MENU -->
         <ul class="navbar-nav fs-5">
             <li class="nav-item">
-                <a class="nav-link {{ Request::is('/clients') ? 'active' : '' }}" href="/menu/3">{{ __('kamus.CLIENTS') }}</a>
+                <a class="nav-link {{ Request::is('/clients') ? 'active' : '' }}" href="/menu/3">CLIENTS</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link {{ Request::is('menu/4') ? 'active' : '' }}" href="/menu/4">{{ __('kamus.CAREERS') }}</a>
+                <a class="nav-link {{ Request::is('menu/4') ? 'active' : '' }}" href="/menu/4">CAREERS</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link {{ Request::is('contact') ? 'active' : '' }}" href="/contact">{{ __('kamus.CONTACT') }}</a>
+                <a class="nav-link {{ Request::is('contact') ? 'active' : '' }}" href="/contact">CONTACT</a>
             </li>
             <li>
                 <div style="margin-top: 6px; margin-left: 20px;">
