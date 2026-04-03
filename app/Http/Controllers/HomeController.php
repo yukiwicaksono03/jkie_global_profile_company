@@ -15,6 +15,7 @@ use Stichoza\GoogleTranslate\GoogleTranslate;
 
 class HomeController extends Controller
 {
+
     public function index(){
         $master = Master::latest()->first();
         $kedai = $master->groupedKedai();
@@ -30,22 +31,23 @@ class HomeController extends Controller
         $facilities = Facility::latest()->get();
         $wisata = Entertainment::latest()->get();
         $slider = Slider::find(1);
-        return view('about', ["master" => $master, "facilities" => $facilities, "wisata" => $wisata, "slider" => $slider]);
+
+        $desc_who_we_are = $this->translateKeepHtml($master->sejarah,bahasa());
+        return view('about', ["master" => $master, "facilities" => $facilities, "wisata" => $wisata, "slider" => $slider, "desc_who_we_are" => $desc_who_we_are]);
     }
     public function menu(Request $request, $flag){
         $master = Master::latest()->first();
         $category = Categories::latest()->get();
         $menuQuery = Menu::with('category')->where('flag','=',$flag)->latest();
         $slider = Slider::find(2);
-        $language = session('locale','en');
 
         $disp_desc = 'none !important;';
         if($flag == 1){
-            $menutitle = $this->translateKeepHtml('Service & Product',$language);
-            $menudesc = $this->translateKeepHtml('We deliver comprehensive inspection engineering services and solutions to ensure quality, compliance, and reliability across all project phases.',$language);
+            $menutitle = $this->translateKeepHtml('Service & Product',bahasa());
+            $menudesc = $this->translateKeepHtml('We deliver comprehensive inspection engineering services and solutions to ensure quality, compliance, and reliability across all project phases.',bahasa());
         }elseif($flag == 2){
-            $menutitle = $this->translateKeepHtml('Insights',$language);
-            $menudesc = $this->translateKeepHtml('We provide data-driven insights and technical analysis to support informed decision-making and continuous improvement in inspection and engineering processes.',$language);
+            $menutitle = $this->translateKeepHtml('Insights',bahasa());
+            $menudesc = $this->translateKeepHtml('We provide data-driven insights and technical analysis to support informed decision-making and continuous improvement in inspection and engineering processes.',bahasa());
             $disp_desc = '';
         }
 
@@ -93,8 +95,7 @@ class HomeController extends Controller
         $menu = Menu::findOrFail($id);
         $slider = Slider::find(2);
 
-        $language = session('locale','en');
-        $desc = $this->translateKeepHtml($menu->desc,$language);
+        $desc = $this->translateKeepHtml($menu->desc,bahasa());
 
         return view('menu_detail', [
             'master' => $master,

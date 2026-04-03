@@ -78,8 +78,8 @@ tinymce.init({
                         <div class="col-12">
                             <div class="form-group">
                                 <label class="form-control-label">Deskripsi Who We Are</label>
-                                <textarea id="editor" name="misi" class="form-control" rows="5">{{ $master->misi }}</textarea>
-                                @error('misi')
+                                <textarea id="editor" name="sejarah" class="form-control" rows="5">{{ $master->sejarah }}</textarea>
+                                @error('sejarah')
                                     <small class="text-danger">Field ini harus di isi</small>
                                 @enderror
                             </div>

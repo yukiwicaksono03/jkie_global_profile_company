@@ -30,15 +30,3 @@ INSERT INTO `menus` (`category_id`, `name`, `desc`, `price`, `is_best`, `created
 INSERT INTO `menus` (`category_id`, `name`, `desc`, `price`, `is_best`, `created_at`, `updated_at`, `flag`, `path_1`) VALUES ('1', 'PT ke 23', 'PT ke 23', '1', '1', '2026-03-26 09:37:17', '2026-03-26 09:38:23', '3', 'menus/image23.png');
 INSERT INTO `menus` (`category_id`, `name`, `desc`, `price`, `is_best`, `created_at`, `updated_at`, `flag`, `path_1`) VALUES ('1', 'PT ke 24', 'PT ke 24', '1', '1', '2026-03-26 09:37:17', '2026-03-26 09:38:23', '3', 'menus/image24.png');
 INSERT INTO `menus` (`category_id`, `name`, `desc`, `price`, `is_best`, `created_at`, `updated_at`, `flag`, `path_1`) VALUES ('1', 'PT ke 25', 'PT ke 25', '1', '1', '2026-03-26 09:37:17', '2026-03-26 09:38:23', '3', 'menus/image25.png');
-
-ALTER TABLE masters add foto_card_1 text default null;
-ALTER TABLE masters add foto_card_2 text default null;
-ALTER TABLE masters add foto_card_3 text default null;
-ALTER TABLE masters add foto_card_4 text default null;
-ALTER TABLE masters add foto_card_5 text default null;
-ALTER TABLE masters add foto_card_6 text default null;
-ALTER TABLE masters add foto_card_7 text default null;
-ALTER TABLE masters add foto_card_8 text default null;
-ALTER TABLE masters add foto_card_9 text default null;
-ALTER TABLE masters add foto_card_10 text default null;
-ALTER TABLE masters add email varchar(100) default null;

@@ -29,7 +29,8 @@
         },
         "files": [
             "app/Helpers/FormatHelper.php",
-            "app/Helpers/PriceHelper.php"
+            "app/Helpers/PriceHelper.php",
+            "app/Helpers/LangHelper.php"
         ]
     },
     "autoload-dev": {

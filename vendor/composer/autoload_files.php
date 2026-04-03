@@ -32,4 +32,5 @@ return array(
     '58571171fd5812e6e447dce228f52f4d' => $vendorDir . '/laravel/framework/src/Illuminate/Support/helpers.php',
     '4a8d9aca1835a07214da924c693e8282' => $baseDir . '/app/Helpers/FormatHelper.php',
     '5f2f44eb4d62a6a205e5b1ac1cef5416' => $baseDir . '/app/Helpers/PriceHelper.php',
+    '5442e186e2251152c36021e866bc663a' => $baseDir . '/app/Helpers/LangHelper.php',
 );
