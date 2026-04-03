@@ -68,6 +68,8 @@ class Master extends Model
         'foto_card_9',
         'foto_card_10',
         'email',
+        'email_2',
+        'email_3',
 
     ];
 

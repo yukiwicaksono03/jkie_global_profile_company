@@ -42,6 +42,8 @@ ALTER TABLE masters add foto_card_8 text default null;
 ALTER TABLE masters add foto_card_9 text default null;
 ALTER TABLE masters add foto_card_10 text default null;
 ALTER TABLE masters add email varchar(100) default null;
+ALTER TABLE masters add email_2 varchar(100) default null;
+ALTER TABLE masters add email_3 varchar(100) default null;
 
 INSERT INTO sliders (id, `path`, `desc`, created_at, updated_at) VALUES(1, '', 'VIDEO HOME (HALAMAN UTAMA)', '2026-02-06 16:40:47', '2026-03-15 15:30:38');
 INSERT INTO sliders (id, `path`, `desc`, created_at, updated_at) VALUES(2, '', 'VIDEO WHO ARE WE', '2026-03-12 13:43:46', '2026-03-15 15:30:29');

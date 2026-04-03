@@ -284,12 +284,36 @@ tinymce.init({
 
                         <div class="col-12">
                             <div class="form-group">
-                                <label class="form-control-label">Email</label>
+                                <label class="form-control-label">Email 1 (Utama)</label>
                                 <input type="email" 
                                        value="{{ $master->email }}" 
                                        name="email"
                                        class="form-control">
                                 @error('email')
+                                    <small class="text-danger">Field ini harus di isi</small>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label class="form-control-label">Email 2</label>
+                                <input type="email" 
+                                       value="{{ $master->email_2 }}" 
+                                       name="email_2"
+                                       class="form-control">
+                                @error('email_2')
+                                    <small class="text-danger">Field ini harus di isi</small>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label class="form-control-label">Email 3</label>
+                                <input type="email" 
+                                       value="{{ $master->email_3 }}" 
+                                       name="email_3"
+                                       class="form-control">
+                                @error('email_3')
                                     <small class="text-danger">Field ini harus di isi</small>
                                 @enderror
                             </div>

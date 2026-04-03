@@ -65,6 +65,8 @@ class DashboardController extends Controller
             'alamat' => 'nullable|string',
             'whatsapp' => 'nullable|string',
             'email' => 'nullable|string',
+            'email_2' => 'nullable|string',
+            'email_3' => 'nullable|string',
 
             'foto_card_1' => 'nullable|image|mimes:jpg,jpeg,webp|max:2048',
             'foto_card_2' => 'nullable|image|mimes:jpg,jpeg,webp|max:2048',

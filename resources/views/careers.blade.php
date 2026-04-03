@@ -23,7 +23,7 @@
 
 <script>
 function sendEmail() {
-    window.location.href = `mailto:information@jkiglobal.com
+    window.location.href = `mailto:{{ $master->email }}
     ?subject=Job Application Submission
     &body=Dear Hiring Team,%0D%0A%0D%0A
 I hope this message finds you well.%0D%0A%0D%0A

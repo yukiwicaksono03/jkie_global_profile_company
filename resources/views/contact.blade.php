@@ -52,12 +52,12 @@
 
 <div class="contact-item">
 <strong>{{ __('kamus.phone') }}</strong>
-<p class="mb-0">+62 812 3456 7890</p>
+<p class="mb-0">{{ $master->whatsapp }}</p>
 </div>
 
 <div class="contact-item">
 <strong>{{ __('kamus.email') }}</strong>
-<p class="mb-0">info@jkieglobal.com</p>
+<p class="mb-0">{{ $master->email }}</p>
 </div>
 
 <!-- <div class="contact-item">
