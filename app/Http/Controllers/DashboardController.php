@@ -64,6 +64,19 @@ class DashboardController extends Controller
 
             'alamat' => 'nullable|string',
             'whatsapp' => 'nullable|string',
+            'email' => 'nullable|string',
+
+            'foto_card_1' => 'nullable|image|mimes:jpg,jpeg,webp|max:2048',
+            'foto_card_2' => 'nullable|image|mimes:jpg,jpeg,webp|max:2048',
+            'foto_card_3' => 'nullable|image|mimes:jpg,jpeg,webp|max:2048',
+            'foto_card_4' => 'nullable|image|mimes:jpg,jpeg,webp|max:2048',
+            'foto_card_5' => 'nullable|image|mimes:jpg,jpeg,webp|max:2048',
+            'foto_card_6' => 'nullable|image|mimes:jpg,jpeg,webp|max:2048',
+            'foto_card_7' => 'nullable|image|mimes:jpg,jpeg,webp|max:2048',
+            'foto_card_8' => 'nullable|image|mimes:jpg,jpeg,webp|max:2048',
+            'foto_card_9' => 'nullable|image|mimes:jpg,jpeg,webp|max:2048',
+            'foto_card_10' => 'nullable|image|mimes:jpg,jpeg,webp|max:2048',
+
         ]);
 
 
@@ -102,6 +115,19 @@ class DashboardController extends Controller
             }
             $filePath = $request->file('foto_sejarah_4')->store('home', 'public');
             $data['foto_sejarah_4'] = $filePath;
+        }
+
+        for ($i = 1; $i <= 10; $i++) {
+            $field = 'foto_card_' . $i;
+
+            if ($request->file($field)) {
+                if (!empty($master->$field) && Storage::disk('public')->exists($master->$field)) {
+                    Storage::disk('public')->delete($master->$field);
+                }
+
+                $filePath = $request->file($field)->store('home', 'public');
+                $data[$field] = $filePath;
+            }
         }
 
 

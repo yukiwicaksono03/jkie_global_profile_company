@@ -56,6 +56,19 @@ class Master extends Model
 
         'alamat',
         'whatsapp',
+
+        'foto_card_1',
+        'foto_card_2',
+        'foto_card_3',
+        'foto_card_4',
+        'foto_card_5',
+        'foto_card_6',
+        'foto_card_7',
+        'foto_card_8',
+        'foto_card_9',
+        'foto_card_10',
+        'email',
+
     ];
 
 
