@@ -30,7 +30,7 @@ class HomeController extends Controller
         $master = Master::latest()->first();
         $facilities = Facility::latest()->get();
         $wisata = Entertainment::latest()->get();
-        $slider = Slider::find(1);
+        $slider = Slider::find(2);
 
         $desc_who_we_are = $this->translateKeepHtml($master->sejarah,bahasa());
         return view('about', ["master" => $master, "facilities" => $facilities, "wisata" => $wisata, "slider" => $slider, "desc_who_we_are" => $desc_who_we_are]);
@@ -39,16 +39,21 @@ class HomeController extends Controller
         $master = Master::latest()->first();
         $category = Categories::latest()->get();
         $menuQuery = Menu::with('category')->where('flag','=',$flag)->latest();
-        $slider = Slider::find(2);
 
         $disp_desc = 'none !important;';
         if($flag == 1){
+            $slider = Slider::find(3);
             $menutitle = $this->translateKeepHtml('Service & Product',bahasa());
             $menudesc = $this->translateKeepHtml('We deliver comprehensive inspection engineering services and solutions to ensure quality, compliance, and reliability across all project phases.',bahasa());
         }elseif($flag == 2){
+            $slider = Slider::find(4);
             $menutitle = $this->translateKeepHtml('Insights',bahasa());
             $menudesc = $this->translateKeepHtml('We provide data-driven insights and technical analysis to support informed decision-making and continuous improvement in inspection and engineering processes.',bahasa());
             $disp_desc = '';
+        }elseif($flag == 3){
+            $slider = Slider::find(5);
+        }elseif($flag == 4){
+            $slider = Slider::find(6);
         }
 
         if ($request->has('category') && $request->category != '') {
@@ -139,7 +144,7 @@ class HomeController extends Controller
         $master = Master::latest()->first();
         $facilities = Facility::latest()->get();
         $wisata = Entertainment::latest()->get();
-        $slider = Slider::find(2);
+        $slider = Slider::find(7);
         return view('contact', ["master" => $master, "facilities" => $facilities, "wisata" => $wisata, "slider" => $slider]);
     }
 

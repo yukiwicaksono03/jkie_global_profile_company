@@ -1,5 +1,5 @@
 <section class="py-5 bg-light-new">
-<div class="container" style="margin-top: 200px; margin-bottom: 200px">
+<div class="container">
    <div class="row d-flex justify-content-center">
         {!! $desc_who_we_are !!}
 
