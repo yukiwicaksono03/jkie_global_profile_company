@@ -33,7 +33,10 @@ class HomeController extends Controller
         $slider = Slider::find(2);
 
         $desc_who_we_are = $this->translateKeepHtml($master->sejarah,bahasa());
-        return view('about', ["master" => $master, "facilities" => $facilities, "wisata" => $wisata, "slider" => $slider, "desc_who_we_are" => $desc_who_we_are]);
+
+        $menuQuery = Menu::with('category')->where('flag','=',2)->latest();
+        $menu = $menuQuery->get();
+        return view('about', ["master" => $master, "facilities" => $facilities, "wisata" => $wisata, "slider" => $slider, "desc_who_we_are" => $desc_who_we_are, "menu" => $menu]);
     }
     public function menu(Request $request, $flag){
         $master = Master::latest()->first();

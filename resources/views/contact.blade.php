@@ -38,7 +38,7 @@
 <div class="row g-4">
 
 <!-- Contact Information -->
-<div class="col-lg-4">
+<div class="col-lg-5">
 <div class="contact-info">
 
 <h5 class="mb-4">{{ __('kamus.company_information') }}</h5>
@@ -74,7 +74,7 @@ Monday – Friday <br>
 </div>
 
 <!-- Contact Form -->
-<div class="col-lg-8">
+<div class="col-lg-7">
 
 <form>
 
