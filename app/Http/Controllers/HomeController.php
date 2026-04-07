@@ -134,9 +134,13 @@ class HomeController extends Controller
 
         $desc = $this->translateKeepHtml($menu->desc,bahasa());
 
+        $menuQuery_by_dropdown = Menu::with('category')->where('flag','=',1)->latest();
+        $menu_by_dropdown = $menuQuery_by_dropdown->get();
+
         return view('menu_detail', [
             'master' => $master,
             'menu' => $menu,
+            'menu_by_dropdown' => $menu_by_dropdown,
             'slider' => $slider,
             'desc'  => $desc,
         ]);
