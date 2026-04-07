@@ -120,11 +120,13 @@
 
                 <ul class="dropdown-menu">
 
+                @if (!empty($menu) && count($menu) > 0)
                 @foreach ($menu as $item)
                     <li>
-                        <a class="dropdown-item" href="/menu/1/{{ $item->id }}">{{ $item->name }}</a>
+                        <a class="dropdown-item" href="/menudetail/{{ $item->id }}">{{ $item->name }}</a>
                     </li>
                 @endforeach
+                @endif
 
                 </ul>
             </li>
