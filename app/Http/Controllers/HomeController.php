@@ -24,7 +24,10 @@ class HomeController extends Controller
         $event = Event::latest()->limit(3)->get();
         $slider = Slider::find(1);
         $gallery = Gallery::latest()->get();
-        return view('index', ["master" => $master, "menu" => $menu, "event" => $event, "slider" => $slider, "gallery" => $gallery, "kedai" => $kedai, "wahana" => $wahana]);
+
+        $menuQuery_by_dropdown = Menu::with('category')->where('flag','=',1)->latest();
+        $menu_by_dropdown = $menuQuery_by_dropdown->get();
+        return view('index', ["master" => $master, "menu" => $menu, "menu_by_dropdown" => $menu_by_dropdown, "event" => $event, "slider" => $slider, "gallery" => $gallery, "kedai" => $kedai, "wahana" => $wahana]);
     }
     public function about(){
         $master = Master::latest()->first();
@@ -36,7 +39,11 @@ class HomeController extends Controller
 
         $menuQuery = Menu::with('category')->where('flag','=',2)->latest();
         $menu = $menuQuery->get();
-        return view('about', ["master" => $master, "facilities" => $facilities, "wisata" => $wisata, "slider" => $slider, "desc_who_we_are" => $desc_who_we_are, "menu" => $menu]);
+
+        $menuQuery_by_dropdown = Menu::with('category')->where('flag','=',1)->latest();
+        $menu_by_dropdown = $menuQuery_by_dropdown->get();
+        
+        return view('about', ["master" => $master, "facilities" => $facilities, "wisata" => $wisata, "slider" => $slider, "desc_who_we_are" => $desc_who_we_are, "menu" => $menu, "menu_by_dropdown" => $menu_by_dropdown]);
     }
     public function menu(Request $request, $flag){
         $master = Master::latest()->first();
@@ -63,12 +70,15 @@ class HomeController extends Controller
             $menuQuery->where('category_id', $request->category);
         }
         $menu = $menuQuery->get();
+
+        $menuQuery_by_dropdown = Menu::with('category')->where('flag','=',1)->latest();
+        $menu_by_dropdown = $menuQuery_by_dropdown->get();
         if($flag == '3'){
-            return view('clients', ["master" => $master, "categories" => $category, "menu" => $menu, "slider" => $slider]);
+            return view('clients', ["master" => $master, "categories" => $category, "menu" => $menu, "menu_by_dropdown" => $menu_by_dropdown, "slider" => $slider]);
         }elseif($flag == '4'){
-            return view('careers', ["master" => $master, "categories" => $category, "menu" => $menu, "slider" => $slider]);
+            return view('careers', ["master" => $master, "categories" => $category, "menu" => $menu, "menu_by_dropdown" => $menu_by_dropdown, "slider" => $slider]);
         }else{
-            return view('menu', ["master" => $master, "categories" => $category, "menu" => $menu, "slider" => $slider, 'menutitle' => $menutitle, 'menudesc'  => $menudesc, 'disp_desc' => $disp_desc]);
+            return view('menu', ["master" => $master, "categories" => $category, "menu" => $menu, "menu_by_dropdown" => $menu_by_dropdown, "slider" => $slider, 'menutitle' => $menutitle, 'menudesc'  => $menudesc, 'disp_desc' => $disp_desc]);
         }
     }
 
@@ -95,6 +105,25 @@ class HomeController extends Controller
         }
 
         return $translated;
+    }
+
+    public function menu_detail_by_dropdown($id)
+    {
+        $master = Master::latest()->first();
+        $menu = Menu::findOrFail($id);
+        $slider = Slider::find(2);
+
+        $desc = $this->translateKeepHtml($menu->desc,bahasa());
+        $menuQuery_by_dropdown = Menu::with('category')->where('flag','=',1)->latest();
+        $menu_by_dropdown = $menuQuery_by_dropdown->get();
+
+        return view('menu_detail_by_dropdown', [
+            'master' => $master,
+            'menu' => $menu,
+            'menu_by_dropdown' => $menu_by_dropdown,
+            'slider' => $slider,
+            'desc'  => $desc,
+        ]);
     }
 
     public function menu_detail($id)
@@ -148,7 +177,10 @@ class HomeController extends Controller
         $facilities = Facility::latest()->get();
         $wisata = Entertainment::latest()->get();
         $slider = Slider::find(7);
-        return view('contact', ["master" => $master, "facilities" => $facilities, "wisata" => $wisata, "slider" => $slider]);
+
+        $menuQuery_by_dropdown = Menu::with('category')->where('flag','=',1)->latest();
+        $menu_by_dropdown = $menuQuery_by_dropdown->get();
+        return view('contact', ["master" => $master, "facilities" => $facilities, "wisata" => $wisata, "slider" => $slider, "menu_by_dropdown" => $menu_by_dropdown]);
     }
 
     public function careers(){

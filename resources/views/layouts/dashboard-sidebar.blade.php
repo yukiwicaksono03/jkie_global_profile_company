@@ -14,7 +14,7 @@
                         <a href="/admin/home"><i class="menu-icon fa fa-dashboard"></i>Home</a>
                     </li>
                     <li class="{{ Request::is('admin/slider') ? 'active' : '' }}">
-                        <a href="/admin/slider"><i class="menu-icon fa fa-home"></i>Slider Home (Video)</a>
+                        <a href="/admin/slider"><i class="menu-icon fa fa-home"></i>SLIDER HOME (VIDEO)</a>
                     </li>
 
                     <li class="{{ Request::is('admin/menu/1') ? 'active' : '' }}">

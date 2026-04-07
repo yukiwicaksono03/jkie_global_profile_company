@@ -10,8 +10,6 @@ class DashboardController extends Controller
 {
     public function index(){
         $master = Master::first();
-        $menuQuery = Menu::with('category')->where('flag','=',2)->latest();
-        $menu = $menuQuery->get();
         return view("dashboard", compact('master'));
     }
     public function update(Request $request)
