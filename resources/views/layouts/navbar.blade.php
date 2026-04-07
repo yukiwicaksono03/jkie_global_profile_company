@@ -107,8 +107,26 @@
                 <a class="nav-link {{ Request::is('about') ? 'active' : '' }}" href="/about">WHO ARE WE</a>
             </li>
 
-            <li class="nav-item">
-                <a class="nav-link {{ Request::is('menu/1') ? 'active' : '' }}" href="/menu/1">SERVICE & PRODUCTS</a>
+            <!-- SERVICE & PRODUCTS DROPDOWN -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle {{ Request::is('menu/1*') ? 'active' : '' }}"
+                   href="#"
+                   id="serviceDropdown"
+                   role="button"
+                   data-bs-toggle="dropdown"
+                   aria-expanded="false">
+                    SERVICE & PRODUCTS
+                </a>
+
+                <ul class="dropdown-menu">
+
+                @foreach ($menu as $item)
+                    <li>
+                        <a class="dropdown-item" href="/menu/1/{{ $item->id }}">{{ $item->name }}</a>
+                    </li>
+                @endforeach
+
+                </ul>
             </li>
 
             <li class="nav-item">
