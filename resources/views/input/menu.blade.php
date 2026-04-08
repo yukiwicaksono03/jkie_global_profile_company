@@ -137,6 +137,56 @@ tinymce.init({
                         </div>
                     @endif
                 </div>
+                <div class="col col-md-3"></div>
+                <div class="col-12 col-md-2" style="{{ ($flag != 5) ? 'display:none;' : '' }}">
+                    <input type="file" name="path_5" class="form-control">
+                    @if (isset($menu) && $menu->path_5)
+                        <div class="mt-5" id="preview-wrapper">
+                            <img src="{{ asset('storage/app/public/'.$menu->path_5) }}" alt="Preview" class="img-thumbnail">
+                        </div>
+                    @endif
+                </div>
+                <div class="col-12 col-md-2" style="{{ ($flag != 5) ? 'display:none;' : '' }}">
+                    <input type="file" name="path_6" class="form-control">
+                    @if (isset($menu) && $menu->path_6)
+                        <div class="mt-5" id="preview-wrapper">
+                            <img src="{{ asset('storage/app/public/'.$menu->path_6) }}" alt="Preview" class="img-thumbnail">
+                        </div>
+                    @endif
+                </div>
+                <div class="col-12 col-md-2" style="{{ ($flag != 5) ? 'display:none;' : '' }}">
+                    <input type="file" name="path_7" class="form-control">
+                    @if (isset($menu) && $menu->path_7)
+                        <div class="mt-5" id="preview-wrapper">
+                            <img src="{{ asset('storage/app/public/'.$menu->path_7) }}" alt="Preview" class="img-thumbnail">
+                        </div>
+                    @endif
+                </div>
+                <div class="col-12 col-md-2" style="{{ ($flag != 5) ? 'display:none;' : '' }}">
+                    <input type="file" name="path_8" class="form-control">
+                    @if (isset($menu) && $menu->path_8)
+                        <div class="mt-5" id="preview-wrapper">
+                            <img src="{{ asset('storage/app/public/'.$menu->path_8) }}" alt="Preview" class="img-thumbnail">
+                        </div>
+                    @endif
+                </div>
+                <div class="col col-md-3"></div>
+                <div class="col-12 col-md-2" style="{{ ($flag != 5) ? 'display:none;' : '' }}">
+                    <input type="file" name="path_9" class="form-control">
+                    @if (isset($menu) && $menu->path_9)
+                        <div class="mt-5" id="preview-wrapper">
+                            <img src="{{ asset('storage/app/public/'.$menu->path_9) }}" alt="Preview" class="img-thumbnail">
+                        </div>
+                    @endif
+                </div>
+                <div class="col-12 col-md-2" style="{{ ($flag != 5) ? 'display:none;' : '' }}">
+                    <input type="file" name="path_10" class="form-control">
+                    @if (isset($menu) && $menu->path_10)
+                        <div class="mt-5" id="preview-wrapper">
+                            <img src="{{ asset('storage/app/public/'.$menu->path_10) }}" alt="Preview" class="img-thumbnail">
+                        </div>
+                    @endif
+                </div>
             </div>
         </div>
         <div class="card-footer">

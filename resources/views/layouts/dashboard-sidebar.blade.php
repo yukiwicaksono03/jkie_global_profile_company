@@ -17,6 +17,10 @@
                         <a href="/admin/slider"><i class="menu-icon fa fa-home"></i>SLIDER HOME (VIDEO)</a>
                     </li>
 
+                    <li class="{{ Request::is('admin/slider') ? 'active' : '' }}">
+                        <a href="/admin/menu/5"><i class="menu-icon fa fa-home"></i>WHO WE ARE</a>
+                    </li>
+
                     <li class="{{ Request::is('admin/menu/1') ? 'active' : '' }}">
                         <a href="/admin/menu/1"><i class="menu-icon fa fa-align-left"></i>SERVICE & PRODUCTS</a>
                     </li>

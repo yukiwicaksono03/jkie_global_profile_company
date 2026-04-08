@@ -103,11 +103,28 @@
 
         <!-- LEFT MENU -->
         <ul class="navbar-nav fs-5">
-            <li class="nav-item">
-                <a class="nav-link {{ Request::is('about') ? 'active' : '' }}" href="/about">WHO ARE WE</a>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle {{ Request::is('menu/5*') ? 'active' : '' }}"
+                   href="#"
+                   id="serviceDropdown"
+                   role="button"
+                   data-bs-toggle="dropdown"
+                   aria-expanded="false">
+                    WHO ARE WE
+                </a>
+
+                <ul class="dropdown-menu">
+
+                @foreach ($menu_by_dropdown as $item)
+                    <li>
+                        <a class="dropdown-item" href="/menu_detail_by_dropdown/{{ $item->id ?? ''}}">{{ $item->name ?? ''}}</a>
+                    </li>
+                @endforeach
+
+                </ul>
             </li>
 
-            <!-- SERVICE & PRODUCTS DROPDOWN -->
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle {{ Request::is('menu/1*') ? 'active' : '' }}"
                    href="#"
@@ -120,7 +137,7 @@
 
                 <ul class="dropdown-menu">
 
-                @foreach ($menu_by_dropdown as $item)
+                @foreach ($menu_by_dropdown2 as $item)
                     <li>
                         <a class="dropdown-item" href="/menu_detail_by_dropdown/{{ $item->id ?? ''}}">{{ $item->name ?? ''}}</a>
                     </li>
