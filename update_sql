@@ -4,6 +4,12 @@ ALTER TABLE menus add path_1 text default null;
 ALTER TABLE menus add path_2 text default null;
 ALTER TABLE menus add path_3 text default null;
 ALTER TABLE menus add path_4 text default null;
+ALTER TABLE menus add path_5 text default null;
+ALTER TABLE menus add path_6 text default null;
+ALTER TABLE menus add path_7 text default null;
+ALTER TABLE menus add path_8 text default null;
+ALTER TABLE menus add path_9 text default null;
+ALTER TABLE menus add path_10 text default null;
 
 INSERT INTO `menus` (`category_id`, `name`, `desc`, `price`, `is_best`, `created_at`, `updated_at`, `flag`, `path_1`) VALUES ('1', 'PT ke 1', 'PT ke 1', '1', '1', '2026-03-26 09:37:17', '2026-03-26 09:38:23', '3', 'menus/image1.png');
 INSERT INTO `menus` (`category_id`, `name`, `desc`, `price`, `is_best`, `created_at`, `updated_at`, `flag`, `path_1`) VALUES ('1', 'PT ke 2', 'PT ke 2', '1', '1', '2026-03-26 09:37:17', '2026-03-26 09:38:23', '3', 'menus/image2.png');

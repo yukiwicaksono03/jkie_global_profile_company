@@ -116,9 +116,9 @@
 
                 <ul class="dropdown-menu">
 
-                @foreach ($menu_by_dropdown as $item)
+                @foreach ($menu_by_folder as $item)
                     <li>
-                        <a class="dropdown-item" href="/menu_detail_by_dropdown/{{ $item->id ?? ''}}">{{ $item->name ?? ''}}</a>
+                        <a class="dropdown-item" href="/menu_detail_by_folder/{{ $item->id ?? ''}}">{{ $item->name ?? ''}}</a>
                     </li>
                 @endforeach
 
@@ -137,7 +137,7 @@
 
                 <ul class="dropdown-menu">
 
-                @foreach ($menu_by_dropdown2 as $item)
+                @foreach ($menu_by_dropdown as $item)
                     <li>
                         <a class="dropdown-item" href="/menu_detail_by_dropdown/{{ $item->id ?? ''}}">{{ $item->name ?? ''}}</a>
                     </li>
