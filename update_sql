@@ -58,3 +58,5 @@ INSERT INTO sliders (id, `path`, `desc`, created_at, updated_at) VALUES(4, '', '
 INSERT INTO sliders (id, `path`, `desc`, created_at, updated_at) VALUES(5, '', 'VIDEO CLIENTS', '2026-03-12 13:43:46', '2026-03-15 15:30:29');
 INSERT INTO sliders (id, `path`, `desc`, created_at, updated_at) VALUES(6, '', 'VIDEO CAREERS', '2026-03-12 13:43:46', '2026-03-15 15:30:29');
 INSERT INTO sliders (id, `path`, `desc`, created_at, updated_at) VALUES(7, '', 'VIDEO CONTACT', '2026-03-12 13:43:46', '2026-03-15 15:30:29');
+
+alter table menus add urutan int4 default null;
