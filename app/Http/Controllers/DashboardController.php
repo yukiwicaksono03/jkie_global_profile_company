@@ -64,6 +64,7 @@ class DashboardController extends Controller
 
             'alamat' => 'nullable|string',
             'whatsapp' => 'nullable|string',
+            'phone_office' => 'nullable|string',
             'email' => 'nullable|string',
             'email_2' => 'nullable|string',
             'email_3' => 'nullable|string',

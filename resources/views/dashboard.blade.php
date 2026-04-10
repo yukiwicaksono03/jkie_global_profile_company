@@ -284,6 +284,19 @@ tinymce.init({
 
                         <div class="col-12">
                             <div class="form-group">
+                                <label class="form-control-label">No Telp Kantor</label>
+                                <input type="text" 
+                                       value="{{ $master->phone_office }}" 
+                                       name="phone_office"
+                                       class="form-control">
+                                @error('phone_office')
+                                    <small class="text-danger">Field ini harus di isi</small>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="form-group">
                                 <label class="form-control-label">Email 1 (Utama)</label>
                                 <input type="email" 
                                        value="{{ $master->email }}" 

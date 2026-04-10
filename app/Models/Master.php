@@ -56,6 +56,7 @@ class Master extends Model
 
         'alamat',
         'whatsapp',
+        'phone_office',
 
         'foto_card_1',
         'foto_card_2',
