@@ -57,7 +57,7 @@
 
 <div class="contact-item">
 <strong>{{ __('kamus.office_phone') }}</strong>
-<p class="mb-0">{{ $master->whatsapp }}</p>
+<p class="mb-0">{{ $master->office_phone }}</p>
 </div>
 
 <div class="contact-item">
