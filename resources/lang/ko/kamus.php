@@ -37,6 +37,7 @@ return [
     'company_information' => '회사 정보',
     'address' => '주소',
     'phone' => '전화번호',
+    'office_phone' => '사무실 전화번호',
     'email' => '이메일',
     'full_name' => '이름',
     'email_address' => '이메일 주소',

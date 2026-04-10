@@ -37,6 +37,7 @@ return [
     'company_information' => 'Informasi Perusahaan',
     'address' => 'Alamat',
     'phone' => 'Telepon',
+    'office_phone' => 'No Telepon Kantor',
     'email' => 'Email',
     'full_name' => 'Nama Lengkap',
     'email_address' => 'Alamat Email',
