@@ -81,39 +81,38 @@ Monday – Friday <br>
 <!-- Contact Form -->
 <div class="col-lg-7">
 
-<form>
+<form onsubmit="sendEmail(event)">
+    <div class="row g-3">
 
-<div class="row g-3">
+        <div class="col-md-6">
+            <label class="form-label">Full Name</label>
+            <input type="text" id="name" class="form-control">
+        </div>
 
-<div class="col-md-6">
-<label class="form-label">{{ __('kamus.full_name') }}</label>
-<input type="text" class="form-control" placeholder="{{ __('kamus.your_name') }}">
-</div>
+        <div class="col-md-6">
+            <label class="form-label">Email</label>
+            <input type="email" id="email" class="form-control">
+        </div>
 
-<div class="col-md-6">
-<label class="form-label">{{ __('kamus.email_address') }}</label>
-<input type="email" class="form-control" placeholder="{{ __('kamus.your_email') }}">
-</div>
+        <div class="col-12">
+            <label class="form-label">Subject</label>
+            <input type="text" id="subject" class="form-control">
+        </div>
 
-<div class="col-12">
-<label class="form-label">{{ __('kamus.subject') }}</label>
-<input type="text" class="form-control" placeholder="{{ __('kamus.subject') }}">
-</div>
+        <div class="col-12">
+            <label class="form-label">Message</label>
+            <textarea id="message" class="form-control" rows="5"></textarea>
+        </div>
 
-<div class="col-12">
-<label class="form-label">{{ __('kamus.message') }}</label>
-<textarea class="form-control" rows="5" placeholder="{{ __('kamus.write_your') }}"></textarea>
-</div>
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary px-4">
+                Send Message
+            </button>
+        </div>
 
-<div class="col-12">
-<button type="submit" class="btn btn-primary px-4">
-{{ __('kamus.send_message') }}
-</button>
-</div>
-
-</div>
-
+    </div>
 </form>
+
 
 </div>
 
@@ -135,4 +134,30 @@ Monday – Friday <br>
 
 </div>
 </section>
+
+<script>
+function sendEmail(e) {
+    e.preventDefault();
+
+    let name = document.getElementById('name').value;
+    let email = document.getElementById('email').value;
+    let subject = document.getElementById('subject').value;
+    let message = document.getElementById('message').value;
+
+    // let body = encodeURIComponent(
+    // `Name: ${name}
+    // Email: ${email}
+
+    // Message:
+    // ${message}`
+    // );
+
+    let body = encodeURIComponent(`${message}`);
+
+    let mailtoLink = `mailto:roni@jk-inspection.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+
+    window.location.href = mailtoLink;
+}
+</script>
+
 @endsection

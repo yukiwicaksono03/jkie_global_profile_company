@@ -37,7 +37,7 @@ return [
     'company_information' => 'Company Information',
     'address' => 'Address',
     'phone' => 'Phone',
-    'office_phone' => 'Office Number',
+    'office_phone' => 'Office Phone',
     'email' => 'Email',
     'full_name' => 'Full Name',
     'email_address' => 'Email Address',

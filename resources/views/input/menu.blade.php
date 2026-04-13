@@ -113,7 +113,7 @@ tinymce.init({
                         </div>
                     @endif
                 </div>
-                <div class="col-12 col-md-2" style="{{ ($flag == 3) ? 'display:none;' : '' }}">
+                <div class="col-12 col-md-2">
                     <input type="file" name="path_2" class="form-control">
                     @if (isset($menu) && $menu->path_2)
                         <div class="mt-5" id="preview-wrapper">
@@ -121,7 +121,7 @@ tinymce.init({
                         </div>
                     @endif
                 </div>
-                <div class="col-12 col-md-2" style="{{ ($flag == 3) ? 'display:none;' : '' }}">
+                <div class="col-12 col-md-2">
                     <input type="file" name="path_3" class="form-control">
                     @if (isset($menu) && $menu->path_3)
                         <div class="mt-5" id="preview-wrapper">
@@ -129,7 +129,7 @@ tinymce.init({
                         </div>
                     @endif
                 </div>
-                <div class="col-12 col-md-2" style="{{ ($flag == 3) ? 'display:none;' : '' }}">
+                <div class="col-12 col-md-2">
                     <input type="file" name="path_4" class="form-control">
                     @if (isset($menu) && $menu->path_4)
                         <div class="mt-5" id="preview-wrapper">
@@ -138,7 +138,7 @@ tinymce.init({
                     @endif
                 </div>
                 <div class="col col-md-3"></div>
-                <div class="col-12 col-md-2" style="{{ ($flag != 5) ? 'display:none;' : '' }}">
+                <div class="col-12 col-md-2">
                     <input type="file" name="path_5" class="form-control">
                     @if (isset($menu) && $menu->path_5)
                         <div class="mt-5" id="preview-wrapper">
@@ -146,7 +146,7 @@ tinymce.init({
                         </div>
                     @endif
                 </div>
-                <div class="col-12 col-md-2" style="{{ ($flag != 5) ? 'display:none;' : '' }}">
+                <div class="col-12 col-md-2">
                     <input type="file" name="path_6" class="form-control">
                     @if (isset($menu) && $menu->path_6)
                         <div class="mt-5" id="preview-wrapper">
@@ -154,7 +154,7 @@ tinymce.init({
                         </div>
                     @endif
                 </div>
-                <div class="col-12 col-md-2" style="{{ ($flag != 5) ? 'display:none;' : '' }}">
+                <div class="col-12 col-md-2">
                     <input type="file" name="path_7" class="form-control">
                     @if (isset($menu) && $menu->path_7)
                         <div class="mt-5" id="preview-wrapper">
@@ -162,7 +162,7 @@ tinymce.init({
                         </div>
                     @endif
                 </div>
-                <div class="col-12 col-md-2" style="{{ ($flag != 5) ? 'display:none;' : '' }}">
+                <div class="col-12 col-md-2">
                     <input type="file" name="path_8" class="form-control">
                     @if (isset($menu) && $menu->path_8)
                         <div class="mt-5" id="preview-wrapper">
@@ -171,7 +171,7 @@ tinymce.init({
                     @endif
                 </div>
                 <div class="col col-md-3"></div>
-                <div class="col-12 col-md-2" style="{{ ($flag != 5) ? 'display:none;' : '' }}">
+                <div class="col-12 col-md-2">
                     <input type="file" name="path_9" class="form-control">
                     @if (isset($menu) && $menu->path_9)
                         <div class="mt-5" id="preview-wrapper">
@@ -179,7 +179,7 @@ tinymce.init({
                         </div>
                     @endif
                 </div>
-                <div class="col-12 col-md-2" style="{{ ($flag != 5) ? 'display:none;' : '' }}">
+                <div class="col-12 col-md-2">
                     <input type="file" name="path_10" class="form-control">
                     @if (isset($menu) && $menu->path_10)
                         <div class="mt-5" id="preview-wrapper">
