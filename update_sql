@@ -61,3 +61,5 @@ INSERT INTO sliders (id, `path`, `desc`, created_at, updated_at) VALUES(7, '', '
 
 alter table menus add urutan int4 default null;
 ALTER TABLE masters add phone_office varchar(100) default null;
+
+alter table menus add type_client int4 default null;

@@ -65,6 +65,7 @@ class MenuController extends Controller
             'path_3'        => $filePath3,
             'path_4'        => $filePath4,
             'flag'        => $request->flag,
+            'type_client'        => $request->type_client,
         ]);
 
         return redirect()->route('admin.menu', ['flag' => $request->flag])->with('success', 'Menu berhasil ditambahkan!');
@@ -141,6 +142,7 @@ class MenuController extends Controller
             'path_3'        => $filePath3,
             'path_4'        => $filePath4,
             'flag'        => $request->flag,
+            'type_client'        => $request->type_client,
         ]);
         return redirect()->route('admin.menu', ['flag' => $request->flag])->with('success', 'Menu berhasil diperbarui!');
     }

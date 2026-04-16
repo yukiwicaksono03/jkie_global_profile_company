@@ -113,6 +113,41 @@ class HomeController extends Controller
         return $translated;
     }
 
+    public function menu_detail_by_client($id)
+    {
+        $master = Master::latest()->first();
+        $category = Categories::latest()->get();
+        $menuQuery = Menu::with('category')->where('flag','=',3)->latest();
+
+        $disp_desc = 'none !important;';
+        if($id == 1){
+            $slider = Slider::find(3);
+            $menutitle = $this->translateKeepHtml('Service & Product',bahasa());
+            $menudesc = $this->translateKeepHtml('We deliver comprehensive inspection engineering services and solutions to ensure quality, compliance, and reliability across all project phases.',bahasa());
+        }elseif($id == 2){
+            $slider = Slider::find(4);
+            $menutitle = $this->translateKeepHtml('Insights',bahasa());
+            $menudesc = $this->translateKeepHtml('We provide data-driven insights and technical analysis to support informed decision-making and continuous improvement in inspection and engineering processes.',bahasa());
+            $disp_desc = '';
+        }elseif($id == 3){
+            $slider = Slider::find(5);
+        }elseif($id == 4){
+            $slider = Slider::find(6);
+        }
+
+        if ($id != '') {
+            $menuQuery->where('type_client', $id);
+        }
+        $menu = $menuQuery->get();
+
+        $menuQuery_by_folder = Menu::with('category')->where('flag','=',5)->orderBy('urutan', 'asc');
+        $menu_by_folder = $menuQuery_by_folder->get();
+        $menuQuery_by_dropdown = Menu::with('category')->where('flag','=',1)->orderBy('urutan', 'asc');
+        $menu_by_dropdown = $menuQuery_by_dropdown->get();
+
+            return view('menu_detail_by_client', ["master" => $master, "categories" => $category, "menu" => $menu, "menu_by_folder" => $menu_by_folder, "menu_by_dropdown" => $menu_by_dropdown, "slider" => $slider]);
+        }
+
     public function menu_detail_by_dropdown($id)
     {
         $master = Master::latest()->first();

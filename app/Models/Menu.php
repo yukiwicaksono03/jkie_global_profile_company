@@ -18,7 +18,8 @@ class Menu extends Model
         'path_4',
         "price",
         "is_best",
-        "flag"
+        "flag",
+        "type_client"
     ];
     
     public function category()

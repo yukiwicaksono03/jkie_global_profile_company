@@ -24,6 +24,7 @@ Route::get('/menu/{flag}', [HomeController::class, "menu"])->name('menu');
 Route::get('/menu_detail/{id}', [HomeController::class, "menu_detail"])->name('menu_detail');
 Route::get('/menu_detail_by_dropdown/{id}', [HomeController::class, "menu_detail_by_dropdown"])->name('menu_detail_by_dropdown');
 Route::get('/menu_detail_by_folder/{id}', [HomeController::class, "menu_detail_by_folder"])->name('menu_detail_by_folder');
+Route::get('/menu_detail_by_client/{flag}', [HomeController::class, "menu_detail_by_client"])->name('menu_detail_by_client');
 Route::get('/event', [HomeController::class, "event"])->name('event');
 Route::get('/facility', [HomeController::class, "facility"])->name('facility');
 Route::get('/clients', [HomeController::class, "clients"])->name('clients');

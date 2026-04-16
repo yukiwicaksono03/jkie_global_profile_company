@@ -38,13 +38,43 @@
 
 <div class="row g-4">
 
-@foreach ($menu as $item)
-<div class="col-6 col-md-3">
-<div class="client-card text-center">
-<img src="{{ asset('storage/app/public/'.$item->path_1) }}" class="img-fluid" alt="{{$item->name}}">
-</div>
-</div>
-@endforeach
+
+    <div class="row d-flex justify-content-center gap-3 align-items-stretch">
+            <div class="p-2 col-lg-3 mb-4">
+                <div class="card" style="cursor:pointer"
+                    onclick="window.location.href='{{ route('menu_detail_by_client',1) }}'" >
+                    <img src="{{ asset('public/images/default_client.jpeg') }}"
+                            class="rounded"
+                            style="width:100%; height:100%; object-fit:cover;"
+                            alt="Clients for Overseas Project" >
+
+
+                    <div class="p-3 mt-1">
+                        <p class="fs-5 text-center ">Clients for Overseas Project</p>
+                        <p class="fs-6 text-center fw-bold">
+                            {{ __('kamus.read_more') }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="p-2 col-lg-3 mb-4">
+                <div class="card" style="cursor:pointer"
+                    onclick="window.location.href='{{ route('menu_detail_by_client',2) }}'" >
+                    <img src="{{ asset('public/images/default_client.jpeg') }}"
+                            class="rounded"
+                            style="width:100%; height:100%; object-fit:cover;"
+                            alt="Clients for Indonesia Project and Overseas Project" >
+
+
+                    <div class="p-3 mt-1">
+                        <p class="fs-5 text-center ">Clients for Indonesia Project and Overseas Project</p>
+                        <p class="fs-6 text-center fw-bold">
+                            {{ __('kamus.read_more') }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+    </div>
 
 </div>
 </div>

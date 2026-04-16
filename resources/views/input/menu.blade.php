@@ -43,17 +43,16 @@ if($flag == 1){
                     @enderror
                 </div>
             </div>
-            <!-- <div class="row form-group">
-                <div class="col col-md-3"><label class=" form-control-label">Harga</label></div>
+            <div class="row form-group" style="{{ ($flag == 3) ? '' : 'display:none;' }}">
+                <div class="col col-md-3"><label class=" form-control-label">Tipe Client</label></div>
                 <div class="col-12 col-md-9">
-                    <input type="text" name="price" class="form-control"
-                    value="{{ old('price', isset($menu) ? $menu->price : '') }}"
-                    >
-                    @error('price')
-                        <small class="text-danger">{{ $message }}</small>
-                    @enderror
+                <select id="type_client" name="type_client">
+                    <option value="" {{ old('type_client', $menu->type_client ?? '') == '0' ? 'selected' : '' }}></option>
+                    <option value="1" {{ old('type_client', $menu->type_client ?? '') == '1' ? 'selected' : '' }}>Overseas Project</option>
+                    <option value="2" {{ old('type_client', $menu->type_client ?? '') == '2' ? 'selected' : '' }}>Indonesia & Overseas Project</option>
+                </select>
                 </div>
-            </div> -->
+            </div>
             <div class="row form-group">
                 <div class="col col-md-3"><label class=" form-control-label">Deskripsi</label></div>
                 <div class="col-12 col-md-9">
@@ -198,6 +197,7 @@ const editor = document.getElementById("editor");
 const markup = document.getElementById("markup");
 const initialContent = @json($menu->desc ?? '');
 
+  markup.innerHTML = initialContent;
 
 pell.init({
   element: editor,
@@ -207,7 +207,6 @@ pell.init({
 })
 
   editor.content.innerHTML = initialContent;
-
 
 </script>
 
