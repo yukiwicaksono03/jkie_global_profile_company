@@ -207,13 +207,13 @@
                     <p class="fs-1 fw-bold text-light" style="color:#184D2B">
                         {{ $master->greating_home_2 }}
                     </p>
-                    <p class="fs-6 text-light">
+                    <p class="fs-5 text-light">
                         {{ __('kamus.description') }}
                     </p>
 
                     <div class="d-flex gap-2">
-                        <a href="/contact" class="btn btn-blue">{{ __('kamus.contact_us') }}</a>
-                        <a href="/careers" class="btn btn-blue">{{ __('kamus.join_team') }}</a>
+                        <a href="/contact" class="btn btn-blue" style="font-size:20px !important;">{{ __('kamus.contact_us') }}</a>
+                        <a href="/careers" class="btn btn-blue" style="font-size:20px !important;">{{ __('kamus.join_team') }}</a>
                     </div>
                 </div>
             </div>
