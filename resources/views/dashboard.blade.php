@@ -3,8 +3,46 @@
 
 <link rel="stylesheet" type="text/css" href="https://unpkg.com/pell/dist/pell.min.css">
 <style type="text/css">
-    .pell-content{
-  border: 1px solid black;
+ 
+.pell-actionbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 8px;
+  background: #f8f9fb;
+  border: 1px solid #ddd;
+
+}
+
+.pell-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 6px;
+  border: none;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 14px;
+}
+
+.pell-button:hover {
+  background: #e9ecef;
+}
+
+.pell-button:active {
+  background: #d0d5dd;
+}
+
+.pell-content {
+  padding: 12px;
+  min-height: 200px;
+  font-size: 14px;
+  line-height: 1.6;
+  border: 1px solid #ddd;
+
 }
 </style>
 
@@ -343,16 +381,133 @@ const editor = document.getElementById("editor");
 const markup = document.getElementById("markup");
 const initialContent = @json($master->sejarah ?? '');
 
+  markup.innerHTML = initialContent;
 
 pell.init({
   element: editor,
   onChange: (html) => {
     markup.innerText = html;
-  }
+  },
+
+  actions: [
+    {
+      name: 'bold',
+      icon: '<b>B</b>',
+      title: 'Bold',
+      result: () => document.execCommand('bold')
+    },
+    {
+      name: 'italic',
+      icon: '<i>I</i>',
+      title: 'Italic',
+      result: () => document.execCommand('italic')
+    },
+    {
+      name: 'underline',
+      icon: '<u>U</u>',
+      title: 'Underline',
+      result: () => document.execCommand('underline')
+    },
+    {
+      name: 'strikethrough',
+      icon: '<strike>S</strike>',
+      title: 'Strike-through',
+      result: () => document.execCommand('strikeThrough')
+    },
+    {
+      name: 'heading1',
+      icon: '<b>H <sub>1</sub></b>',
+      title: 'Heading 1',
+      result: () => document.execCommand('formatBlock', false, 'h1')
+    },
+    {
+      name: 'heading2',
+      icon: '<b>H <sub>2</sub></b>',
+      title: 'Heading 2',
+      result: () => document.execCommand('formatBlock', false, 'h2')
+    },
+    {
+      name: 'paragraph',
+      icon: '¶',
+      title: 'Paragraph',
+      result: () => document.execCommand('formatBlock', false, 'p')
+    },
+    {
+      name: 'quote',
+      icon: '“ ”',
+      title: 'Quote',
+      result: () => document.execCommand('formatBlock', false, 'blockquote')
+    },
+    {
+      name: 'olist',
+      icon: '#',
+      title: 'Ordered List',
+      result: () => document.execCommand('insertOrderedList')
+    },
+    {
+      name: 'ulist',
+      icon: '•',
+      title: 'Unordered List',
+      result: () => document.execCommand('insertUnorderedList')
+    },
+    {
+      name: 'code',
+      icon: '&lt;/&gt;',
+      title: 'Code',
+      result: () => document.execCommand('formatBlock', false, 'pre')
+    },
+    {
+      name: 'line',
+      icon: '―',
+      title: 'Horizontal Line',
+      result: () => document.execCommand('insertHorizontalRule')
+    },
+    {
+      name: 'link',
+      icon: '🔗',
+      title: 'Link',
+      result: () => {
+        const url = prompt('Enter URL');
+        if (url) document.execCommand('createLink', false, url);
+      }
+    },
+    {
+      name: 'image',
+      icon: '📷',
+      title: 'Image',
+      result: () => {
+        const url = prompt('Enter image URL');
+        if (url) document.execCommand('insertImage', false, url);
+      }
+    },
+    {
+      name: 'left',
+      icon: '<svg width="16" height="16"><rect width="16" height="2" y="2"/><rect width="12" height="2" y="6"/><rect width="16" height="2" y="10"/></svg>',
+      title: 'Align Left',
+      result: () => document.execCommand('justifyLeft')
+    },
+    {
+      name: 'center',
+      icon: '<svg width="16" height="16"><rect width="12" height="2" x="2" y="2"/><rect width="16" height="2" y="6"/><rect width="12" height="2" x="2" y="10"/></svg>',
+      title: 'Align Center',
+      result: () => document.execCommand('justifyCenter')
+    },
+    {
+      name: 'right',
+      icon: '<svg width="16" height="16"><rect width="16" height="2" y="2"/><rect width="12" height="2" x="4" y="6"/><rect width="16" height="2" y="10"/></svg>',
+      title: 'Align Right',
+      result: () => document.execCommand('justifyRight')
+    },
+    {
+      name: 'justify',
+      icon: '<svg width="16" height="16"><rect width="16" height="2" y="2"/><rect width="16" height="2" y="6"/><rect width="16" height="2" y="10"/></svg>',
+      title: 'Justify',
+      result: () => document.execCommand('justifyFull')
+    }
+  ]
 })
 
   editor.content.innerHTML = initialContent;
-
 
 </script>
 @endsection
