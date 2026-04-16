@@ -23,7 +23,7 @@
             <div class="p-2 col-lg-3 mb-4">
                 <div class="card" style="cursor:pointer"
                     onclick="window.location.href='{{ route('menu_detail',$item->id) }}'" >
-                    <img src="{{ (($item->path_1) ? asset('storage/app/public/'.$item->path_1) : asset('public/images/default_pict.jpeg')) }}"
+                    <img src="{{ ($loop->even) ? asset('public/images/default_bg_2.jpeg') : asset('public/images/default_bg_1.jpeg') }}"
                             class="rounded"
                             style="width:100%; height:100%; object-fit:cover;"
                             alt="{{ $item->name }}" >
