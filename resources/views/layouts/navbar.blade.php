@@ -207,7 +207,7 @@
                     <p class="fs-1 fw-bold text-light" style="color:#184D2B">
                         {{ $master->greating_home_2 }}
                     </p>
-                    <p class="fs-6 text-light" style="font-size:25px !important;">
+                    <p class="fs-6 text-light" style="font-size:25px !important; width:124% !important;">
                         {{ __('kamus.description') }}
                     </p>
 
