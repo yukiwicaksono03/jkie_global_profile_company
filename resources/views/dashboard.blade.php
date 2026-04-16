@@ -1,25 +1,12 @@
 @extends('layouts.dashboard-main')
 @section('main')
 
-<script src="https://cdn.tiny.cloud/1/lq3l90kc05n1awguo2ktyjez87p79ecvkaxv3gmbfdge6ms5/tinymce/8/tinymce.min.js" referrerpolicy="origin" crossorigin="anonymous"></script>
-<script type="text/javascript">
-tinymce.init({
-  selector: 'textarea#editor',
-  height: 500,
-  plugins: [
-    'advlist', 'autolink', 'lists', 'link', 'image', 'charmap', 'preview',
-    'anchor', 'searchreplace', 'visualblocks', 'code', 'fullscreen',
-    'insertdatetime', 'media', 'table', 'help', 'wordcount',
-    'mediaembed',
-  ],
-  toolbar: 'undo redo | blocks | ' +
-  'bold italic backcolor | alignleft aligncenter ' +
-  'alignright alignjustify | bullist numlist outdent indent | ' +
-  'removeformat | help',
-  content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:16px }'
-});
-</script>
-
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/pell/dist/pell.min.css">
+<style type="text/css">
+    .pell-content{
+  border: 1px solid black;
+}
+</style>
 
 <form action="{{ route('master.update') }}" method="POST" enctype="multipart/form-data">
     @csrf
@@ -78,7 +65,9 @@ tinymce.init({
                         <div class="col-12">
                             <div class="form-group">
                                 <label class="form-control-label">Deskripsi Who We Are</label>
-                                <textarea id="editor" name="sejarah" class="form-control" rows="5">{{ $master->sejarah }}</textarea>
+                                                
+                                  <div id="editor"></div>
+                                  <textarea id="markup" name="sejarah" style="display: none;"></textarea>
                                 @error('sejarah')
                                     <small class="text-danger">Field ini harus di isi</small>
                                 @enderror
@@ -346,4 +335,24 @@ tinymce.init({
         </div>
     </div>
 </form>
+
+<script src="https://unpkg.com/pell"></script>
+<script type="text/javascript">
+    const pell = window.pell;
+const editor = document.getElementById("editor");
+const markup = document.getElementById("markup");
+const initialContent = @json($master->sejarah ?? '');
+
+
+pell.init({
+  element: editor,
+  onChange: (html) => {
+    markup.innerText = html;
+  }
+})
+
+  editor.content.innerHTML = initialContent;
+
+
+</script>
 @endsection
