@@ -55,6 +55,28 @@ if($flag == 1){
   border: 1px solid #ddd;
 
 }
+
+.image-resizer {
+  position: relative;
+  display: inline-block;
+}
+
+.image-resizer img {
+  display: block;
+  max-width: 100%;
+}
+
+.resize-handle {
+  width: 10px;
+  height: 10px;
+  background: #007bff;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  cursor: se-resize;
+  border-radius: 2px;
+}
+
 </style>
 
 <div class="card">
@@ -362,6 +384,59 @@ pell.init({
 })
 
   editor.content.innerHTML = initialContent;
+
+
+const editorEl = document.getElementById('editor');
+
+let currentResizer = null;
+let currentImg = null;
+
+editorEl.addEventListener('click', function(e) {
+  // remove old resizer
+  document.querySelectorAll('.image-resizer').forEach(el => {
+    el.replaceWith(...el.childNodes);
+  });
+
+  if (e.target.tagName === 'IMG') {
+    const img = e.target;
+
+    const wrapper = document.createElement('span');
+    wrapper.className = 'image-resizer';
+
+    img.parentNode.insertBefore(wrapper, img);
+    wrapper.appendChild(img);
+
+    const handle = document.createElement('span');
+    handle.className = 'resize-handle';
+    wrapper.appendChild(handle);
+
+    currentResizer = handle;
+    currentImg = img;
+
+    initResize(handle, img);
+  }
+});
+
+function initResize(handle, img) {
+  let startX, startWidth;
+
+  handle.onmousedown = function(e) {
+    e.preventDefault();
+
+    startX = e.clientX;
+    startWidth = img.offsetWidth;
+
+    document.onmousemove = function(e) {
+      const newWidth = startWidth + (e.clientX - startX);
+      img.style.width = newWidth + 'px';
+    };
+
+    document.onmouseup = function() {
+      document.onmousemove = null;
+      document.onmouseup = null;
+    };
+  };
+}
 
 </script>
 
