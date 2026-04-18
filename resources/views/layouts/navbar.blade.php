@@ -207,9 +207,10 @@
                     <p class="fs-1 fw-bold text-light" style="color:#184D2B">
                         {{ $master->greating_home_2 }}
                     </p>
-                    <p class="fs-6 text-light" style="font-size:25px !important; width:124% !important;">
-                        {{ __('kamus.description') }}
-                    </p>
+                    <font class="text-light" style="width: 150%; font-size:25px !important;">
+                        {{ __('kamus.description1') }}<br>
+                        {{ __('kamus.description2') }}
+                    </font>
 
                     <div class="d-flex gap-2">
                         <a href="/contact" class="btn btn-blue" style="font-size:20px !important;">{{ __('kamus.contact_us') }}</a>
