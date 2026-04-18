@@ -44,6 +44,118 @@
 </div>
 
 <nav class="footer px-5 py-3" style="background:#080884; color: white">
+
+
+<style type="text/css">
+.footer {
+  background: linear-gradient(to right, #1c1f26, #2b2f38);
+  color: #ccc;
+  padding: 50px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  gap: 80px;
+  flex-wrap: wrap;
+}
+
+.footer-col h3 {
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.footer-item {
+  margin-bottom: 15px;
+  cursor: pointer;
+  color: #f1c40f;
+  font-weight: bold;
+}
+
+.footer-item .arrow {
+  margin-right: 8px;
+}
+
+.footer-detail {
+  color: #bbb;
+  font-weight: normal;
+  margin-top: 8px;
+  margin-left: 20px;
+  line-height: 1.6;
+  display: none;
+}
+
+.footer-item.active .footer-detail {
+  display: block;
+}
+</style>
+
+<div class="" style="margin: 20px;">
+  <div class="footer-container">
+
+    <!-- Asia Pacific -->
+    <div class="footer-col">
+      <h3>Asia Pacific</h3>
+
+      <div class="footer-item">
+        <span class="arrow">▼</span> Korea (HQ)
+        <div class="footer-detail">
+          JK Inspection Engineering Co., Ltd.<br>
+          459-14, Gasan-Dong, GeumCheon-Gu, Seoul, Korea<br>
+          (Hyundai Tera Tower Gasan DK, #619)<br>
+          (Zip Code: 08503)
+        </div>
+      </div>
+
+      <div class="footer-item">
+        <span class="arrow">▶</span> Indonesia
+        <div class="footer-detail">
+          PT JKIE Global Indonesia<br>
+          PLAZA AMINTA 2ND FLOOR, SUITE 208<br>
+          JALAN TB SIMATUPANG KAV. 10<br>
+          SOUTH JAKARTA, DKI JAKARTA
+        </div>
+      </div>
+
+      <div class="footer-item">
+        <span class="arrow">▶</span> China
+        <div class="footer-detail">
+          JK China Suzhou Office
+        </div>
+      </div>
+    </div>
+
+    <!-- Europe & Russia -->
+    <div class="footer-col">
+      <h3>Europe & Russia</h3>
+
+      <div class="footer-item">
+        <span class="arrow">▶</span> Russia
+        <div class="footer-detail">
+          JK Inspection Engineering Co., Ltd.<br>
+          Office 105, Novoslabodskaya Ulitsa 58<br>
+          Moscow, Russia
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll('.footer-item').forEach(item => {
+    item.addEventListener('click', () => {
+      item.classList.toggle('active');
+
+      const arrow = item.querySelector('.arrow');
+      arrow.textContent = item.classList.contains('active') ? '▼' : '▶';
+    });
+  });
+</script>
+
+
+
     <div class="container py-5">
         <div class="row">
             <div class="col-lg-6">
