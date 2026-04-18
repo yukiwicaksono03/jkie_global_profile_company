@@ -91,18 +91,6 @@
 }
 </style>
 
-<script>
-  document.querySelectorAll('.footer-item').forEach(item => {
-    item.addEventListener('click', () => {
-      item.classList.toggle('active');
-
-      const arrow = item.querySelector('.arrow');
-      arrow.textContent = item.classList.contains('active') ? '▼' : '▶';
-    });
-  });
-</script>
-
-
 
     <div class="container py-5">
 
@@ -217,4 +205,15 @@ function openWhatsApp() {
 
     window.open(url, "_blank");
 }
+</script>
+
+<script>
+  document.querySelectorAll('.footer-item').forEach(item => {
+    item.addEventListener('click', () => {
+      item.classList.toggle('active');
+
+      const arrow = item.querySelector('.arrow');
+      arrow.textContent = item.classList.contains('active') ? '▼' : '▶';
+    });
+  });
 </script>
