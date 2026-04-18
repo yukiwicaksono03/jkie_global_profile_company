@@ -1,3 +1,48 @@
+<style>
+    .wa-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 60px;
+        height: 60px;
+        background-color: #25D366;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        cursor: pointer;
+        animation: bounce 1.5s infinite;
+        z-index: 999;
+    }
+
+    .wa-button img {
+        width: 35px;
+        height: 35px;
+    }
+
+    @keyframes bounce {
+        0%, 20%, 50%, 80%, 100% {
+            transform: translateY(0);
+        }
+        40% {
+            transform: translateY(-10px);
+        }
+        60% {
+            transform: translateY(-5px);
+        }
+    }
+
+    .wa-button:hover {
+        animation: none;
+        transform: scale(1.1);
+    }
+</style>
+
+<div class="wa-button" onclick="openWhatsApp()">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+</div>
+
 <nav class="footer px-5 py-3" style="background:#080884; color: white">
     <div class="container py-5">
         <div class="row">
@@ -47,3 +92,14 @@
         </div>
     </div>
 </nav>
+
+<script>
+function openWhatsApp() {
+    let phone = "{{ $master->whatsapp }}";
+    let message = "";
+
+    let url = "https://wa.me/62" + phone + "?text=" + encodeURIComponent(message);
+
+    window.open(url, "_blank");
+}
+</script>
