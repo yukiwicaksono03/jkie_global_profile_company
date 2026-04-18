@@ -91,7 +91,23 @@
 }
 </style>
 
-<div class="" style="margin: 20px;">
+<script>
+  document.querySelectorAll('.footer-item').forEach(item => {
+    item.addEventListener('click', () => {
+      item.classList.toggle('active');
+
+      const arrow = item.querySelector('.arrow');
+      arrow.textContent = item.classList.contains('active') ? '▼' : '▶';
+    });
+  });
+</script>
+
+
+
+    <div class="container py-5">
+
+
+<div class="" style="margin-bottom: 20px;">
   <div class="footer-container">
 
     <!-- Asia Pacific -->
@@ -143,20 +159,7 @@
   </div>
 </div>
 
-<script>
-  document.querySelectorAll('.footer-item').forEach(item => {
-    item.addEventListener('click', () => {
-      item.classList.toggle('active');
 
-      const arrow = item.querySelector('.arrow');
-      arrow.textContent = item.classList.contains('active') ? '▼' : '▶';
-    });
-  });
-</script>
-
-
-
-    <div class="container py-5">
         <div class="row">
             <div class="col-lg-6">
                 <p class="fs-5 fw-bold">
