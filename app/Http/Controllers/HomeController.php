@@ -154,7 +154,10 @@ class HomeController extends Controller
         $menu = Menu::findOrFail($id);
         $slider = Slider::find(2);
 
-        $desc = $this->translateKeepHtml($menu->desc,bahasa());
+        $desc = $menu->desc;
+        if($id <> 49){
+            $desc = $this->translateKeepHtml($menu->desc,bahasa());
+        }
         $menuQuery_by_folder = Menu::with('category')->where('flag','=',5)->orderBy('urutan', 'asc');
         $menu_by_folder = $menuQuery_by_folder->get();
         $menuQuery_by_dropdown = Menu::with('category')->where('flag','=',1)->orderBy('urutan', 'asc');
