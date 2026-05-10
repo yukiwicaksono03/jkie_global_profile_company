@@ -12,7 +12,20 @@ if($flag == 1){
 }
 @endphp
 
-<link rel="stylesheet" type="text/css" href="https://unpkg.com/pell/dist/pell.min.css">
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+
+<!-- Place the first <script> tag in your HTML's <head> -->
+<script src="https://cdn.tiny.cloud/1/it0bm6tmgdlt3l4o564sejid8etrt16r3ohlrv6t6pb16464/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+
+<!-- Place the following <script> and <textarea> tags your HTML's <body> -->
+<script>
+  tinymce.init({
+    selector: 'textarea',
+    plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount linkchecker',
+    toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
+  });
+</script>
+
 <style type="text/css">
  
 .pell-actionbar {
@@ -117,8 +130,7 @@ if($flag == 1){
                 <div class="col col-md-3"><label class=" form-control-label">Deskripsi</label></div>
                 <div class="col-12 col-md-9">
 
-                  <div id="editor"></div>
-                  <textarea id="markup" name="desc" style="display: none;"></textarea>
+                  <textarea id="markup" name="desc"></textarea>
                     @error('desc')
                         <small class="text-danger">{{ $message }}</small>
                     @enderror
