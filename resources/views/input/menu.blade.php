@@ -128,7 +128,9 @@ if($flag == 1){
             </div>
             <div class="row form-group">
                 <div class="col col-md-3"><label class=" form-control-label">Deskripsi</label></div>
-                <div class="col-12 col-md-9">
+            </div>
+            <div class="row form-group">
+                <div class="col-12 col-md-20">
 
                   <textarea id="markup" name="desc"></textarea>
                     @error('desc')
@@ -165,7 +167,7 @@ if($flag == 1){
                     @enderror
                 </div>
             </div> -->
-            <div class="row form-group">
+            <div class="row form-group" style="display:none;">
                 <div class="col col-md-3"><label class=" form-control-label">Foto</label></div>
                 <div class="col-12 col-md-2">
                     <input type="file" name="path_1" class="form-control">
