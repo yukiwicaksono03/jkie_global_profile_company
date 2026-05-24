@@ -32,7 +32,8 @@ return [
     'our_clients' => 'Our Clients',
     'trusted_by' => 'Trusted by companies from various industries',
     'join_our' => 'Join Our Team',
-    'we_are' => 'We are always looking for talented professionals to join our growing global team. Explore our current opportunities below. ',
+    'we_are' => 'We are always looking for talented professionals to join our growing global team. Explore our current opportunities. We are currently engaged as a Third-Party Inspection provider, Project Management Consultant/Team, and Manpower Supply partner across the Oil & Gas, Petrochemical, and Mining sectors. Therefore, we are seeking highly qualified professionals such as Inspectors, Engineers, Managers, and Supervisors to support our growing operations.
+Please feel free to contact us for further information and career opportunities. ',
     'contact_us' => 'Contact Us',
     'get_in' => 'Get in touch with our team for inquiries and collaborations',
     'company_information' => 'Company Information',

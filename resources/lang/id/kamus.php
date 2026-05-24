@@ -32,7 +32,8 @@ return [
     'our_clients' => 'Klien Kami',
     'trusted_by' => 'Dipercaya oleh berbagai perusahaan dari berbagai industri',
     'join_our' => 'Bergabung dengan Tim Kami',
-    'we_are' => 'Kami selalu mencari profesional berbakat untuk bergabung dengan tim global kami yang terus berkembang. Jelajahi peluang yang tersedia di bawah ini.',
+    'we_are' => 'Kami selalu mencari profesional berbakat untuk bergabung dengan tim global kami yang terus berkembang. Jelajahi peluang kami saat ini. Saat ini kami terlibat sebagai penyedia Inspeksi Pihak Ketiga, Konsultan/Tim Manajemen Proyek, dan mitra Penyedia Tenaga Kerja di sektor Minyak & Gas, Petrokimia, dan Pertambangan. Oleh karena itu, kami mencari para profesional yang berkualifikasi tinggi seperti Inspektur, Insinyur, Manajer, dan Supervisor untuk mendukung operasi kami yang berkembang.
+Jangan ragu untuk menghubungi kami untuk informasi lebih lanjut dan peluang karir.',
     'contact_us' => 'Hubungi Kami',
     'get_in' => 'Hubungi tim kami untuk pertanyaan dan kerja sama',
     'company_information' => 'Informasi Perusahaan',
